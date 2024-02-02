@@ -30,14 +30,14 @@ class TabbarCoordinator: BaseCoordinator, TabbarCoordinatorOutput {
         
         return { navigationController in
             
-            let GaleryCoordinator = self.coordinatorFactory.produceGaleryCoordinator(navigationController: navigationController, flowFactory: FlowFactoryImp.defaultFactory)
+            let galeryCoordinator = self.coordinatorFactory.produceGaleryCoordinator(navigationController: navigationController, flowFactory: FlowFactoryImp.defaultFactory)
             
-            GaleryCoordinator.finishFlow = { [weak self, weak GaleryCoordinator] in
-                self?.removeDependency(GaleryCoordinator)
+            galeryCoordinator.finishFlow = { [weak self, weak galeryCoordinator] in
+                self?.removeDependency(galeryCoordinator)
             }
             
-            self.addDependency(GaleryCoordinator)
-            GaleryCoordinator.start()
+            self.addDependency(galeryCoordinator)
+            galeryCoordinator.start()
         }
     }
     
@@ -45,13 +45,13 @@ class TabbarCoordinator: BaseCoordinator, TabbarCoordinatorOutput {
         
         return { navigationController in
             
-            let FavoritesCoordinator = self.coordinatorFactory.produceFavoritesCoordinator(navigationController: navigationController, flowFactory: FlowFactoryImp.defaultFactory)
+            let favoritesCoordinator = self.coordinatorFactory.produceFavoritesCoordinator(navigationController: navigationController, flowFactory: FlowFactoryImp.defaultFactory)
             
-            FavoritesCoordinator.finishFlow = { [weak self, weak FavoritesCoordinator] in
-                self?.removeDependency(FavoritesCoordinator)
+            favoritesCoordinator.finishFlow = { [weak self, weak favoritesCoordinator] in
+                self?.removeDependency(favoritesCoordinator)
             }
-            FavoritesCoordinator.start()
-            self.addDependency(FavoritesCoordinator)
+            favoritesCoordinator.start()
+            self.addDependency(favoritesCoordinator)
         }
     }
 }

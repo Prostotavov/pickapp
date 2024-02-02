@@ -279,8 +279,8 @@
 		33C72BD92B6D639B00D8DADD /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				33C72BDA2B6D639B00D8DADD /* FavoritesFlow */,
 				33C72BEE2B6D639B00D8DADD /* TabbarFlow */,
+				33C72BDA2B6D639B00D8DADD /* FavoritesFlow */,
 				33C72C022B6D639B00D8DADD /* GaleryFlow */,
 			);
 			path = Flows;

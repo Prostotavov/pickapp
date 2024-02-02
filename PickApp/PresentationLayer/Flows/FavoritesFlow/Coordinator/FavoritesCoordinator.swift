@@ -25,8 +25,8 @@ class FavoritesCoordinator: BaseCoordinator, FavoritesCoordinatorOutput {
     }
 
     private func showFavorites() {
-        let FavoritesOutput = factory.produceFavoritesOutput()
-        router.setRootModule(FavoritesOutput, hideBar: true)
+        let favoritesOutput = factory.produceFavoritesOutput()
+        router.setRootModule(favoritesOutput, hideBar: true)
     }
     
 }

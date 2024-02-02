@@ -31,9 +31,9 @@ class GaleryCoordinator: BaseCoordinator, GaleryCoordinatorOutput {
     // MARK: - Flow's controllers
 
     private func showGalery() {
-        let GaleryOutput = factory.produceGaleryOutput()
+        let galeryOutput = factory.produceGaleryOutput()
         
-        router.setRootModule(GaleryOutput, hideBar: true)
+        router.setRootModule(galeryOutput, hideBar: true)
     }
 
 }
