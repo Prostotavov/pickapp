@@ -1,0 +1,8 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - force_cast
+  - for_where
+  - todo
+  - unused_optional_binding
+  - control_statement

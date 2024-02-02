@@ -9,13 +9,58 @@
 /* Begin PBXBuildFile section */
 		33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B722B6D546800D8DADD /* AppDelegate.swift */; };
 		33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B742B6D546800D8DADD /* SceneDelegate.swift */; };
-		33C72B772B6D546800D8DADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B762B6D546800D8DADD /* ViewController.swift */; };
-		33C72B7A2B6D546800D8DADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B782B6D546800D8DADD /* Main.storyboard */; };
 		33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7B2B6D546A00D8DADD /* Assets.xcassets */; };
 		33C72B7F2B6D546A00D8DADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */; };
-		33C72B8A2B6D546B00D8DADD /* PickAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B892B6D546B00D8DADD /* PickAppTests.swift */; };
-		33C72B942B6D546B00D8DADD /* PickAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B932B6D546B00D8DADD /* PickAppUITests.swift */; };
-		33C72B962B6D546B00D8DADD /* PickAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B952B6D546B00D8DADD /* PickAppUITestsLaunchTests.swift */; };
+		33C72BC72B6D621B00D8DADD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC42B6D621B00D8DADD /* Coordinator.swift */; };
+		33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC52B6D621B00D8DADD /* Presentable.swift */; };
+		33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */; };
+		33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */; };
+		33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */; };
+		33C72C222B6D639B00D8DADD /* FlowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BD82B6D639B00D8DADD /* FlowNavigationController.swift */; };
+		33C72C232B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BDC2B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift */; };
+		33C72C242B6D639B00D8DADD /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BDD2B6D639B00D8DADD /* FavoritesCoordinator.swift */; };
+		33C72C252B6D639B00D8DADD /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE12B6D639B00D8DADD /* FavoritesAssembly.swift */; };
+		33C72C262B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE22B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift */; };
+		33C72C272B6D639B00D8DADD /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE42B6D639B00D8DADD /* FavoritesPresenter.swift */; };
+		33C72C282B6D639B00D8DADD /* FavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE62B6D639B00D8DADD /* FavoritesViewInput.swift */; };
+		33C72C292B6D639B00D8DADD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE72B6D639B00D8DADD /* FavoritesViewController.swift */; };
+		33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE82B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift */; };
+		33C72C2B2B6D639B00D8DADD /* FavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BE92B6D639B00D8DADD /* FavoritesViewOutput.swift */; };
+		33C72C2C2B6D639B00D8DADD /* FavoritesInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BEB2B6D639B00D8DADD /* FavoritesInteractorOutput.swift */; };
+		33C72C2D2B6D639B00D8DADD /* FavoritesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BEC2B6D639B00D8DADD /* FavoritesInteractorInput.swift */; };
+		33C72C2E2B6D639B00D8DADD /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BED2B6D639B00D8DADD /* FavoritesInteractor.swift */; };
+		33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF02B6D639B00D8DADD /* TabbarCoordinator.swift */; };
+		33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF12B6D639B00D8DADD /* TabbarCoordinatorOutput.swift */; };
+		33C72C312B6D639B00D8DADD /* FlowTabbarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF42B6D639B00D8DADD /* FlowTabbarAssembly.swift */; };
+		33C72C322B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF52B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift */; };
+		33C72C332B6D639B00D8DADD /* FlowTabbarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF72B6D639B00D8DADD /* FlowTabbarPresenter.swift */; };
+		33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BF92B6D639B00D8DADD /* FlowTabbar.swift */; };
+		33C72C352B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFA2B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift */; };
+		33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */; };
+		33C72C372B6D639B00D8DADD /* FlowTabbarViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */; };
+		33C72C382B6D639B00D8DADD /* FlowTabbarViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */; };
+		33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */; };
+		33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */; };
+		33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */; };
+		33C72C3C2B6D639B00D8DADD /* GaleryCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */; };
+		33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */; };
+		33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */; };
+		33C72C3F2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C0A2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift */; };
+		33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C0C2B6D639B00D8DADD /* GaleryPresenter.swift */; };
+		33C72C412B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C0E2B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift */; };
+		33C72C422B6D639B00D8DADD /* GaleryViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C0F2B6D639B00D8DADD /* GaleryViewOutput.swift */; };
+		33C72C432B6D639B00D8DADD /* GaleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C102B6D639B00D8DADD /* GaleryViewController.swift */; };
+		33C72C442B6D639B00D8DADD /* GaleryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C112B6D639B00D8DADD /* GaleryViewInput.swift */; };
+		33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C132B6D639B00D8DADD /* GaleryInteractorOutput.swift */; };
+		33C72C462B6D639B00D8DADD /* GaleryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C142B6D639B00D8DADD /* GaleryInteractorInput.swift */; };
+		33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C152B6D639B00D8DADD /* GaleryInteractor.swift */; };
+		33C72C482B6D639B00D8DADD /* FlowFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C192B6D639B00D8DADD /* FlowFactoryImp.swift */; };
+		33C72C492B6D639B00D8DADD /* FavoritesFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C1A2B6D639B00D8DADD /* FavoritesFlowFactory.swift */; };
+		33C72C4A2B6D639B00D8DADD /* GaleryFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C1B2B6D639B00D8DADD /* GaleryFlowFactory.swift */; };
+		33C72C4B2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C1D2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift */; };
+		33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */; };
+		33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C202B6D639B00D8DADD /* RouterImp.swift */; };
+		33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C212B6D639B00D8DADD /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +84,61 @@
 		33C72B6F2B6D546800D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72B722B6D546800D8DADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C72B742B6D546800D8DADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33C72B762B6D546800D8DADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33C72B792B6D546800D8DADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33C72B7B2B6D546A00D8DADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33C72B7E2B6D546A00D8DADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C72B802B6D546A00D8DADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C72B852B6D546A00D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C72B892B6D546B00D8DADD /* PickAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAppTests.swift; sourceTree = "<group>"; };
 		33C72B8F2B6D546B00D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C72B932B6D546B00D8DADD /* PickAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAppUITests.swift; sourceTree = "<group>"; };
-		33C72B952B6D546B00D8DADD /* PickAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33C72BC42B6D621B00D8DADD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		33C72BC52B6D621B00D8DADD /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		33C72BD82B6D639B00D8DADD /* FlowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowNavigationController.swift; sourceTree = "<group>"; };
+		33C72BDC2B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72BDD2B6D639B00D8DADD /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		33C72BE12B6D639B00D8DADD /* FavoritesAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
+		33C72BE22B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesAssemblyProtocol.swift; sourceTree = "<group>"; };
+		33C72BE42B6D639B00D8DADD /* FavoritesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		33C72BE62B6D639B00D8DADD /* FavoritesViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewInput.swift; sourceTree = "<group>"; };
+		33C72BE72B6D639B00D8DADD /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		33C72BE82B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72BE92B6D639B00D8DADD /* FavoritesViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewOutput.swift; sourceTree = "<group>"; };
+		33C72BEB2B6D639B00D8DADD /* FavoritesInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractorOutput.swift; sourceTree = "<group>"; };
+		33C72BEC2B6D639B00D8DADD /* FavoritesInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractorInput.swift; sourceTree = "<group>"; };
+		33C72BED2B6D639B00D8DADD /* FavoritesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		33C72BF02B6D639B00D8DADD /* TabbarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		33C72BF12B6D639B00D8DADD /* TabbarCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72BF42B6D639B00D8DADD /* FlowTabbarAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarAssembly.swift; sourceTree = "<group>"; };
+		33C72BF52B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarAssemblyProtocol.swift; sourceTree = "<group>"; };
+		33C72BF72B6D639B00D8DADD /* FlowTabbarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarPresenter.swift; sourceTree = "<group>"; };
+		33C72BF92B6D639B00D8DADD /* FlowTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbar.swift; sourceTree = "<group>"; };
+		33C72BFA2B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarController.swift; sourceTree = "<group>"; };
+		33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewInput.swift; sourceTree = "<group>"; };
+		33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewOutput.swift; sourceTree = "<group>"; };
+		33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorOutput.swift; sourceTree = "<group>"; };
+		33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorInput.swift; sourceTree = "<group>"; };
+		33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractor.swift; sourceTree = "<group>"; };
+		33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinator.swift; sourceTree = "<group>"; };
+		33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryAssembly.swift; sourceTree = "<group>"; };
+		33C72C0A2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryAssemblyProtocol.swift; sourceTree = "<group>"; };
+		33C72C0C2B6D639B00D8DADD /* GaleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryPresenter.swift; sourceTree = "<group>"; };
+		33C72C0E2B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryViewCoordinatorOutput.swift; sourceTree = "<group>"; };
+		33C72C0F2B6D639B00D8DADD /* GaleryViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryViewOutput.swift; sourceTree = "<group>"; };
+		33C72C102B6D639B00D8DADD /* GaleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryViewController.swift; sourceTree = "<group>"; };
+		33C72C112B6D639B00D8DADD /* GaleryViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryViewInput.swift; sourceTree = "<group>"; };
+		33C72C132B6D639B00D8DADD /* GaleryInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryInteractorOutput.swift; sourceTree = "<group>"; };
+		33C72C142B6D639B00D8DADD /* GaleryInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryInteractorInput.swift; sourceTree = "<group>"; };
+		33C72C152B6D639B00D8DADD /* GaleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryInteractor.swift; sourceTree = "<group>"; };
+		33C72C192B6D639B00D8DADD /* FlowFactoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowFactoryImp.swift; sourceTree = "<group>"; };
+		33C72C1A2B6D639B00D8DADD /* FavoritesFlowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesFlowFactory.swift; sourceTree = "<group>"; };
+		33C72C1B2B6D639B00D8DADD /* GaleryFlowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryFlowFactory.swift; sourceTree = "<group>"; };
+		33C72C1D2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImpl.swift; sourceTree = "<group>"; };
+		33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		33C72C202B6D639B00D8DADD /* RouterImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
+		33C72C212B6D639B00D8DADD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				33C72B712B6D546800D8DADD /* PickApp */,
-				33C72B882B6D546B00D8DADD /* PickAppTests */,
-				33C72B922B6D546B00D8DADD /* PickAppUITests */,
 				33C72B702B6D546800D8DADD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,32 +187,367 @@
 		33C72B712B6D546800D8DADD /* PickApp */ = {
 			isa = PBXGroup;
 			children = (
-				33C72B722B6D546800D8DADD /* AppDelegate.swift */,
-				33C72B742B6D546800D8DADD /* SceneDelegate.swift */,
-				33C72B762B6D546800D8DADD /* ViewController.swift */,
-				33C72B782B6D546800D8DADD /* Main.storyboard */,
-				33C72B7B2B6D546A00D8DADD /* Assets.xcassets */,
-				33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */,
-				33C72B802B6D546A00D8DADD /* Info.plist */,
+				33C72BC22B6D61EB00D8DADD /* ApplicationLayer */,
+				33C72C162B6D639B00D8DADD /* BusinessLogicLayer */,
+				33C72BD52B6D639B00D8DADD /* PresentationLayer */,
+				33C72BD22B6D62A800D8DADD /* Model */,
+				33C72BCE2B6D627500D8DADD /* Resources */,
+				33C72BCD2B6D625500D8DADD /* Supporting Files */,
 			);
 			path = PickApp;
 			sourceTree = "<group>";
 		};
-		33C72B882B6D546B00D8DADD /* PickAppTests */ = {
+		33C72BC22B6D61EB00D8DADD /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				33C72B892B6D546B00D8DADD /* PickAppTests.swift */,
+				33C72B722B6D546800D8DADD /* AppDelegate.swift */,
+				33C72B742B6D546800D8DADD /* SceneDelegate.swift */,
+				33C72BC32B6D620900D8DADD /* Protocols */,
+				33C72BCA2B6D622700D8DADD /* Coordinator */,
 			);
-			path = PickAppTests;
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
-		33C72B922B6D546B00D8DADD /* PickAppUITests */ = {
+		33C72BC32B6D620900D8DADD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				33C72B932B6D546B00D8DADD /* PickAppUITests.swift */,
-				33C72B952B6D546B00D8DADD /* PickAppUITestsLaunchTests.swift */,
+				33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */,
+				33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */,
+				33C72BC42B6D621B00D8DADD /* Coordinator.swift */,
+				33C72BC52B6D621B00D8DADD /* Presentable.swift */,
 			);
-			path = PickAppUITests;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		33C72BCA2B6D622700D8DADD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33C72BCD2B6D625500D8DADD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */,
+				33C72B802B6D546A00D8DADD /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33C72BCE2B6D627500D8DADD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33C72B7B2B6D546A00D8DADD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33C72BD22B6D62A800D8DADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33C72BD52B6D639B00D8DADD /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BD62B6D639B00D8DADD /* ReuseableComponents */,
+				33C72BD92B6D639B00D8DADD /* Flows */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		33C72BD62B6D639B00D8DADD /* ReuseableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BD72B6D639B00D8DADD /* FlowNavigationController */,
+			);
+			path = ReuseableComponents;
+			sourceTree = "<group>";
+		};
+		33C72BD72B6D639B00D8DADD /* FlowNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BD82B6D639B00D8DADD /* FlowNavigationController.swift */,
+			);
+			path = FlowNavigationController;
+			sourceTree = "<group>";
+		};
+		33C72BD92B6D639B00D8DADD /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BDA2B6D639B00D8DADD /* FavoritesFlow */,
+				33C72BEE2B6D639B00D8DADD /* TabbarFlow */,
+				33C72C022B6D639B00D8DADD /* GaleryFlow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		33C72BDA2B6D639B00D8DADD /* FavoritesFlow */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BDB2B6D639B00D8DADD /* Coordinator */,
+				33C72BDE2B6D639B00D8DADD /* Modules */,
+			);
+			path = FavoritesFlow;
+			sourceTree = "<group>";
+		};
+		33C72BDB2B6D639B00D8DADD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BDC2B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift */,
+				33C72BDD2B6D639B00D8DADD /* FavoritesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33C72BDE2B6D639B00D8DADD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BDF2B6D639B00D8DADD /* Favorites */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		33C72BDF2B6D639B00D8DADD /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BE02B6D639B00D8DADD /* Assembly */,
+				33C72BE32B6D639B00D8DADD /* Presenter */,
+				33C72BE52B6D639B00D8DADD /* View */,
+				33C72BEA2B6D639B00D8DADD /* Interactor */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		33C72BE02B6D639B00D8DADD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BE12B6D639B00D8DADD /* FavoritesAssembly.swift */,
+				33C72BE22B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		33C72BE32B6D639B00D8DADD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BE42B6D639B00D8DADD /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		33C72BE52B6D639B00D8DADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BE62B6D639B00D8DADD /* FavoritesViewInput.swift */,
+				33C72BE72B6D639B00D8DADD /* FavoritesViewController.swift */,
+				33C72BE82B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift */,
+				33C72BE92B6D639B00D8DADD /* FavoritesViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33C72BEA2B6D639B00D8DADD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BEB2B6D639B00D8DADD /* FavoritesInteractorOutput.swift */,
+				33C72BEC2B6D639B00D8DADD /* FavoritesInteractorInput.swift */,
+				33C72BED2B6D639B00D8DADD /* FavoritesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		33C72BEE2B6D639B00D8DADD /* TabbarFlow */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BEF2B6D639B00D8DADD /* Coordinator */,
+				33C72BF22B6D639B00D8DADD /* Module */,
+			);
+			path = TabbarFlow;
+			sourceTree = "<group>";
+		};
+		33C72BEF2B6D639B00D8DADD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BF02B6D639B00D8DADD /* TabbarCoordinator.swift */,
+				33C72BF12B6D639B00D8DADD /* TabbarCoordinatorOutput.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33C72BF22B6D639B00D8DADD /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BF32B6D639B00D8DADD /* Assembly */,
+				33C72BF62B6D639B00D8DADD /* Presenter */,
+				33C72BF82B6D639B00D8DADD /* View */,
+				33C72BFE2B6D639B00D8DADD /* Interactor */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		33C72BF32B6D639B00D8DADD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BF42B6D639B00D8DADD /* FlowTabbarAssembly.swift */,
+				33C72BF52B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		33C72BF62B6D639B00D8DADD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BF72B6D639B00D8DADD /* FlowTabbarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		33C72BF82B6D639B00D8DADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BF92B6D639B00D8DADD /* FlowTabbar.swift */,
+				33C72BFA2B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift */,
+				33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */,
+				33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */,
+				33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33C72BFE2B6D639B00D8DADD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */,
+				33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */,
+				33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		33C72C022B6D639B00D8DADD /* GaleryFlow */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C032B6D639B00D8DADD /* Coordinator */,
+				33C72C062B6D639B00D8DADD /* Modules */,
+			);
+			path = GaleryFlow;
+			sourceTree = "<group>";
+		};
+		33C72C032B6D639B00D8DADD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */,
+				33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		33C72C062B6D639B00D8DADD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C072B6D639B00D8DADD /* Galery */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		33C72C072B6D639B00D8DADD /* Galery */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C082B6D639B00D8DADD /* Assembly */,
+				33C72C0B2B6D639B00D8DADD /* Presenter */,
+				33C72C0D2B6D639B00D8DADD /* View */,
+				33C72C122B6D639B00D8DADD /* Interactor */,
+			);
+			path = Galery;
+			sourceTree = "<group>";
+		};
+		33C72C082B6D639B00D8DADD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */,
+				33C72C0A2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		33C72C0B2B6D639B00D8DADD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C0C2B6D639B00D8DADD /* GaleryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		33C72C0D2B6D639B00D8DADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C0E2B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift */,
+				33C72C0F2B6D639B00D8DADD /* GaleryViewOutput.swift */,
+				33C72C102B6D639B00D8DADD /* GaleryViewController.swift */,
+				33C72C112B6D639B00D8DADD /* GaleryViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33C72C122B6D639B00D8DADD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C132B6D639B00D8DADD /* GaleryInteractorOutput.swift */,
+				33C72C142B6D639B00D8DADD /* GaleryInteractorInput.swift */,
+				33C72C152B6D639B00D8DADD /* GaleryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		33C72C162B6D639B00D8DADD /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C172B6D639B00D8DADD /* Factories */,
+				33C72C1F2B6D639B00D8DADD /* Routing */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		33C72C172B6D639B00D8DADD /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C182B6D639B00D8DADD /* FlowFactory */,
+				33C72C1C2B6D639B00D8DADD /* CoordinatorFactory */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		33C72C182B6D639B00D8DADD /* FlowFactory */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C192B6D639B00D8DADD /* FlowFactoryImp.swift */,
+				33C72C1A2B6D639B00D8DADD /* FavoritesFlowFactory.swift */,
+				33C72C1B2B6D639B00D8DADD /* GaleryFlowFactory.swift */,
+			);
+			path = FlowFactory;
+			sourceTree = "<group>";
+		};
+		33C72C1C2B6D639B00D8DADD /* CoordinatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C1D2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift */,
+				33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */,
+			);
+			path = CoordinatorFactory;
+			sourceTree = "<group>";
+		};
+		33C72C1F2B6D639B00D8DADD /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C202B6D639B00D8DADD /* RouterImp.swift */,
+				33C72C212B6D639B00D8DADD /* Router.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +564,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				33C72BA42B6D5B4B00D8DADD /* PBXTargetDependency */,
 			);
 			name = PickApp;
 			productName = PickApp;
@@ -215,6 +639,9 @@
 				Base,
 			);
 			mainGroup = 33C72B662B6D546800D8DADD;
+			packageReferences = (
+				33C72BA22B6D5B4200D8DADD /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 33C72B702B6D546800D8DADD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +660,6 @@
 			files = (
 				33C72B7F2B6D546A00D8DADD /* LaunchScreen.storyboard in Resources */,
 				33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */,
-				33C72B7A2B6D546800D8DADD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +684,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C72B772B6D546800D8DADD /* ViewController.swift in Sources */,
+				33C72C282B6D639B00D8DADD /* FavoritesViewInput.swift in Sources */,
+				33C72C2B2B6D639B00D8DADD /* FavoritesViewOutput.swift in Sources */,
+				33C72BC72B6D621B00D8DADD /* Coordinator.swift in Sources */,
+				33C72C4B2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift in Sources */,
+				33C72C312B6D639B00D8DADD /* FlowTabbarAssembly.swift in Sources */,
+				33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */,
+				33C72C242B6D639B00D8DADD /* FavoritesCoordinator.swift in Sources */,
 				33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */,
+				33C72C272B6D639B00D8DADD /* FavoritesPresenter.swift in Sources */,
+				33C72C2C2B6D639B00D8DADD /* FavoritesInteractorOutput.swift in Sources */,
+				33C72C4A2B6D639B00D8DADD /* GaleryFlowFactory.swift in Sources */,
+				33C72C372B6D639B00D8DADD /* FlowTabbarViewInput.swift in Sources */,
+				33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */,
+				33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */,
+				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
+				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
+				33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */,
+				33C72C2E2B6D639B00D8DADD /* FavoritesInteractor.swift in Sources */,
+				33C72C352B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift in Sources */,
+				33C72C252B6D639B00D8DADD /* FavoritesAssembly.swift in Sources */,
+				33C72C3F2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift in Sources */,
 				33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */,
+				33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */,
+				33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */,
+				33C72C292B6D639B00D8DADD /* FavoritesViewController.swift in Sources */,
+				33C72C3C2B6D639B00D8DADD /* GaleryCoordinatorOutput.swift in Sources */,
+				33C72C232B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift in Sources */,
+				33C72C2D2B6D639B00D8DADD /* FavoritesInteractorInput.swift in Sources */,
+				33C72C462B6D639B00D8DADD /* GaleryInteractorInput.swift in Sources */,
+				33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */,
+				33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */,
+				33C72C442B6D639B00D8DADD /* GaleryViewInput.swift in Sources */,
+				33C72C262B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift in Sources */,
+				33C72C322B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift in Sources */,
+				33C72C222B6D639B00D8DADD /* FlowNavigationController.swift in Sources */,
+				33C72C332B6D639B00D8DADD /* FlowTabbarPresenter.swift in Sources */,
+				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
+				33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */,
+				33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */,
+				33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */,
+				33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */,
+				33C72C382B6D639B00D8DADD /* FlowTabbarViewOutput.swift in Sources */,
+				33C72C412B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift in Sources */,
+				33C72C482B6D639B00D8DADD /* FlowFactoryImp.swift in Sources */,
+				33C72C432B6D639B00D8DADD /* GaleryViewController.swift in Sources */,
+				33C72C422B6D639B00D8DADD /* GaleryViewOutput.swift in Sources */,
+				33C72C492B6D639B00D8DADD /* FavoritesFlowFactory.swift in Sources */,
+				33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */,
+				33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */,
+				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
+				33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */,
+				33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +743,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C72B8A2B6D546B00D8DADD /* PickAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +750,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C72B942B6D546B00D8DADD /* PickAppUITests.swift in Sources */,
-				33C72B962B6D546B00D8DADD /* PickAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,17 +766,13 @@
 			target = 33C72B6E2B6D546800D8DADD /* PickApp */;
 			targetProxy = 33C72B902B6D546B00D8DADD /* PBXContainerItemProxy */;
 		};
+		33C72BA42B6D5B4B00D8DADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 33C72BA32B6D5B4B00D8DADD /* SwiftLintPlugin */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		33C72B782B6D546800D8DADD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33C72B792B6D546800D8DADD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,12 +912,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGTZ6TGNVV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PickApp/Info.plist;
+				INFOPLIST_FILE = "PickApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,12 +940,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGTZ6TGNVV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PickApp/Info.plist;
+				INFOPLIST_FILE = "PickApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +1075,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33C72BA22B6D5B4200D8DADD /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33C72BA32B6D5B4B00D8DADD /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33C72BA22B6D5B4200D8DADD /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33C72B672B6D546800D8DADD /* Project object */;
 }
