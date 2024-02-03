@@ -61,6 +61,15 @@
 		33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */; };
 		33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C202B6D639B00D8DADD /* RouterImp.swift */; };
 		33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C212B6D639B00D8DADD /* Router.swift */; };
+		33C72C822B6DBFD800D8DADD /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72C812B6DBFD800D8DADD /* PromiseKit */; };
+		33C72C852B6DBFE800D8DADD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72C842B6DBFE800D8DADD /* Alamofire */; };
+		33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C892B6E81FA00D8DADD /* APIRouter.swift */; };
+		33C72C902B6E878600D8DADD /* ConnectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C8E2B6E878600D8DADD /* ConnectionSettings.swift */; };
+		33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C8F2B6E878600D8DADD /* SessionHelpers.swift */; };
+		33C72C962B6E879E00D8DADD /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C932B6E879E00D8DADD /* APIHeaders.swift */; };
+		33C72C972B6E879E00D8DADD /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C942B6E879E00D8DADD /* APIKeys.swift */; };
+		33C72C9A2B6E8CE900D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C992B6E8CE900D8DADD /* Photo.swift */; };
+		33C72C9E2B6EE62600D8DADD /* APIRouterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,14 +90,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33C72B6F2B6D546800D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72B722B6D546800D8DADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C72B742B6D546800D8DADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		33C72B7B2B6D546A00D8DADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33C72B7E2B6D546A00D8DADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C72B802B6D546A00D8DADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33C72B852B6D546A00D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C72B8F2B6D546B00D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72BC42B6D621B00D8DADD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		33C72BC52B6D621B00D8DADD /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -139,6 +145,16 @@
 		33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		33C72C202B6D639B00D8DADD /* RouterImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
 		33C72C212B6D639B00D8DADD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		33C72C862B6E819E00D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = PickApp.app; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickApp.app"; sourceTree = "<absolute>"; };
+		33C72C872B6E819E00D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PickAppTests.xctest; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickAppTests.xctest"; sourceTree = "<absolute>"; };
+		33C72C882B6E819E00D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PickAppUITests.xctest; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickAppUITests.xctest"; sourceTree = "<absolute>"; };
+		33C72C892B6E81FA00D8DADD /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		33C72C8E2B6E878600D8DADD /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
+		33C72C8F2B6E878600D8DADD /* SessionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelpers.swift; sourceTree = "<group>"; };
+		33C72C932B6E879E00D8DADD /* APIHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
+		33C72C942B6E879E00D8DADD /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		33C72C992B6E8CE900D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C72C822B6DBFD800D8DADD /* PromiseKit in Frameworks */,
+				33C72C852B6DBFE800D8DADD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,27 +188,16 @@
 			isa = PBXGroup;
 			children = (
 				33C72B712B6D546800D8DADD /* PickApp */,
-				33C72B702B6D546800D8DADD /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		33C72B702B6D546800D8DADD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				33C72B6F2B6D546800D8DADD /* PickApp.app */,
-				33C72B852B6D546A00D8DADD /* PickAppTests.xctest */,
-				33C72B8F2B6D546B00D8DADD /* PickAppUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		33C72B712B6D546800D8DADD /* PickApp */ = {
 			isa = PBXGroup;
 			children = (
+				33C72C5D2B6DB45100D8DADD /* NetworkLayer */,
 				33C72BC22B6D61EB00D8DADD /* ApplicationLayer */,
 				33C72C162B6D639B00D8DADD /* BusinessLogicLayer */,
 				33C72BD52B6D639B00D8DADD /* PresentationLayer */,
-				33C72BD22B6D62A800D8DADD /* Model */,
 				33C72BCE2B6D627500D8DADD /* Resources */,
 				33C72BCD2B6D625500D8DADD /* Supporting Files */,
 			);
@@ -242,13 +249,6 @@
 				33C72B7B2B6D546A00D8DADD /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		33C72BD22B6D62A800D8DADD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		33C72BD52B6D639B00D8DADD /* PresentationLayer */ = {
@@ -550,6 +550,44 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
+		33C72C5D2B6DB45100D8DADD /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C8D2B6E878600D8DADD /* APIHelpers */,
+				33C72C922B6E879E00D8DADD /* APIModel */,
+				33C72C892B6E81FA00D8DADD /* APIRouter.swift */,
+				33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */,
+				33C72C8B2B6E85E700D8DADD /* Response Model */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		33C72C8B2B6E85E700D8DADD /* Response Model */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C992B6E8CE900D8DADD /* Photo.swift */,
+			);
+			path = "Response Model";
+			sourceTree = "<group>";
+		};
+		33C72C8D2B6E878600D8DADD /* APIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C8E2B6E878600D8DADD /* ConnectionSettings.swift */,
+				33C72C8F2B6E878600D8DADD /* SessionHelpers.swift */,
+			);
+			path = APIHelpers;
+			sourceTree = "<group>";
+		};
+		33C72C922B6E879E00D8DADD /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				33C72C932B6E879E00D8DADD /* APIHeaders.swift */,
+				33C72C942B6E879E00D8DADD /* APIKeys.swift */,
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,11 +602,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				33C72BA42B6D5B4B00D8DADD /* PBXTargetDependency */,
 			);
 			name = PickApp;
+			packageProductDependencies = (
+				33C72C812B6DBFD800D8DADD /* PromiseKit */,
+				33C72C842B6DBFE800D8DADD /* Alamofire */,
+			);
 			productName = PickApp;
-			productReference = 33C72B6F2B6D546800D8DADD /* PickApp.app */;
+			productReference = 33C72C862B6E819E00D8DADD /* PickApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		33C72B842B6D546A00D8DADD /* PickAppTests */ = {
@@ -586,7 +627,7 @@
 			);
 			name = PickAppTests;
 			productName = PickAppTests;
-			productReference = 33C72B852B6D546A00D8DADD /* PickAppTests.xctest */;
+			productReference = 33C72C872B6E819E00D8DADD /* PickAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		33C72B8E2B6D546B00D8DADD /* PickAppUITests */ = {
@@ -604,7 +645,7 @@
 			);
 			name = PickAppUITests;
 			productName = PickAppUITests;
-			productReference = 33C72B8F2B6D546B00D8DADD /* PickAppUITests.xctest */;
+			productReference = 33C72C882B6E819E00D8DADD /* PickAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -641,8 +682,10 @@
 			mainGroup = 33C72B662B6D546800D8DADD;
 			packageReferences = (
 				33C72BA22B6D5B4200D8DADD /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				33C72C802B6DBFD800D8DADD /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				33C72C832B6DBFE800D8DADD /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
-			productRefGroup = 33C72B702B6D546800D8DADD /* Products */;
+			productRefGroup = 33C72B662B6D546800D8DADD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -693,11 +736,13 @@
 				33C72C242B6D639B00D8DADD /* FavoritesCoordinator.swift in Sources */,
 				33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */,
 				33C72C272B6D639B00D8DADD /* FavoritesPresenter.swift in Sources */,
+				33C72C972B6E879E00D8DADD /* APIKeys.swift in Sources */,
 				33C72C2C2B6D639B00D8DADD /* FavoritesInteractorOutput.swift in Sources */,
 				33C72C4A2B6D639B00D8DADD /* GaleryFlowFactory.swift in Sources */,
 				33C72C372B6D639B00D8DADD /* FlowTabbarViewInput.swift in Sources */,
 				33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */,
 				33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */,
+				33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */,
 				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
 				33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */,
@@ -708,7 +753,10 @@
 				33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */,
 				33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */,
 				33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */,
+				33C72C962B6E879E00D8DADD /* APIHeaders.swift in Sources */,
 				33C72C292B6D639B00D8DADD /* FavoritesViewController.swift in Sources */,
+				33C72C9A2B6E8CE900D8DADD /* Photo.swift in Sources */,
+				33C72C902B6E878600D8DADD /* ConnectionSettings.swift in Sources */,
 				33C72C3C2B6D639B00D8DADD /* GaleryCoordinatorOutput.swift in Sources */,
 				33C72C232B6D639B00D8DADD /* FavoritesCoordinatorOutput.swift in Sources */,
 				33C72C2D2B6D639B00D8DADD /* FavoritesInteractorInput.swift in Sources */,
@@ -717,10 +765,12 @@
 				33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */,
 				33C72C442B6D639B00D8DADD /* GaleryViewInput.swift in Sources */,
 				33C72C262B6D639B00D8DADD /* FavoritesAssemblyProtocol.swift in Sources */,
+				33C72C9E2B6EE62600D8DADD /* APIRouterStruct.swift in Sources */,
 				33C72C322B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift in Sources */,
 				33C72C222B6D639B00D8DADD /* FlowNavigationController.swift in Sources */,
 				33C72C332B6D639B00D8DADD /* FlowTabbarPresenter.swift in Sources */,
 				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
+				33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */,
 				33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */,
 				33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */,
 				33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */,
@@ -765,10 +815,6 @@
 			isa = PBXTargetDependency;
 			target = 33C72B6E2B6D546800D8DADD /* PickApp */;
 			targetProxy = 33C72B902B6D546B00D8DADD /* PBXContainerItemProxy */;
-		};
-		33C72BA42B6D5B4B00D8DADD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 33C72BA32B6D5B4B00D8DADD /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1085,13 +1131,34 @@
 				minimumVersion = 0.54.0;
 			};
 		};
+		33C72C802B6DBFD800D8DADD /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+		33C72C832B6DBFE800D8DADD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		33C72BA32B6D5B4B00D8DADD /* SwiftLintPlugin */ = {
+		33C72C812B6DBFD800D8DADD /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 33C72BA22B6D5B4200D8DADD /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
+			package = 33C72C802B6DBFD800D8DADD /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		33C72C842B6DBFE800D8DADD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33C72C832B6DBFE800D8DADD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
