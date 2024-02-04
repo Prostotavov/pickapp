@@ -14,11 +14,16 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     var output: GaleryViewOutput!
     var assembler: GaleryAssemblyProtocol = GaleryAssembly()
     
+    private var photosData: [Photo] = []
+    private var collectionView: UICollectionView!
+    
     private lazy var session: Session = {
         return ConnectionSettings.sessionManager()
     }()
     
     override func viewDidLoad() {
+        
+        collectionViewSetup()
         
         let appID = "***"
         let accessKey = "***"
@@ -43,15 +48,11 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
         firstly {
             photosPromise
         }
-        .then { photo -> Promise<Photo> in
+        .done { photo in
             print(photo)
-            return Promise<Photo>.value(photo)
         }
         .catch { error in
             print("error in ViewController: \(error)")
-        }
-        .finally {
-            print("finally done")
         }
     }
     
@@ -61,16 +62,55 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
         firstly {
             photosPromise
         }
-        .then { photos -> Promise<[Photo]> in
-            print(photos)
-            return Promise<[Photo]>.value(photos)
+        .done { photos in
+            self.photosData = photos
+            self.collectionView.reloadData()
         }
         .catch { error in
             print("error in ViewController: \(error)")
         }
-        .finally {
-            print("finally done")
-        }
     }
     
+}
+
+extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionViewSetup() {
+        let layout = UICollectionViewFlowLayout()
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCellIdentifier")
+        collectionView.backgroundColor = UIColor.white
+        
+        view.addSubview(collectionView)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photosData.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCellIdentifier", for: indexPath) as? PhotoCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+
+        let photo = photosData[indexPath.item]
+        if let imageURL = URL(string: photo.urls!.small) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageURL) {
+                    let image = UIImage(data: imageData)
+                    DispatchQueue.main.async {
+                        cell.imageView.image = image
+                    }
+                }
+            }
+        }
+
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellSize = self.view.frame.width / 3 - 10
+        return CGSize(width: cellSize , height: cellSize)
+    }
 }

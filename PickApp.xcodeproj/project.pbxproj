@@ -70,6 +70,7 @@
 		33C72C972B6E879E00D8DADD /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C942B6E879E00D8DADD /* APIKeys.swift */; };
 		33C72C9A2B6E8CE900D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C992B6E8CE900D8DADD /* Photo.swift */; };
 		33C72C9E2B6EE62600D8DADD /* APIRouterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */; };
+		33C72CAC2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CAB2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,9 +146,6 @@
 		33C72C1E2B6D639B00D8DADD /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		33C72C202B6D639B00D8DADD /* RouterImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
 		33C72C212B6D639B00D8DADD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		33C72C862B6E819E00D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = PickApp.app; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickApp.app"; sourceTree = "<absolute>"; };
-		33C72C872B6E819E00D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PickAppTests.xctest; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickAppTests.xctest"; sourceTree = "<absolute>"; };
-		33C72C882B6E819E00D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PickAppUITests.xctest; path = "/Users/a1111/Desktop/PickApp/build/Debug-iphoneos/PickAppUITests.xctest"; sourceTree = "<absolute>"; };
 		33C72C892B6E81FA00D8DADD /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		33C72C8E2B6E878600D8DADD /* ConnectionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionSettings.swift; sourceTree = "<group>"; };
 		33C72C8F2B6E878600D8DADD /* SessionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelpers.swift; sourceTree = "<group>"; };
@@ -155,6 +153,10 @@
 		33C72C942B6E879E00D8DADD /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		33C72C992B6E8CE900D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterStruct.swift; sourceTree = "<group>"; };
+		33C72CA82B6FA31200D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C72CA92B6FA31200D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C72CAA2B6FA31200D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C72CAB2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				33C72B712B6D546800D8DADD /* PickApp */,
+				33C72CA82B6FA31200D8DADD /* PickApp.app */,
+				33C72CA92B6FA31200D8DADD /* PickAppTests.xctest */,
+				33C72CAA2B6FA31200D8DADD /* PickAppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -490,6 +495,7 @@
 				33C72C0F2B6D639B00D8DADD /* GaleryViewOutput.swift */,
 				33C72C102B6D639B00D8DADD /* GaleryViewController.swift */,
 				33C72C112B6D639B00D8DADD /* GaleryViewInput.swift */,
+				33C72CAB2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -609,7 +615,7 @@
 				33C72C842B6DBFE800D8DADD /* Alamofire */,
 			);
 			productName = PickApp;
-			productReference = 33C72C862B6E819E00D8DADD /* PickApp.app */;
+			productReference = 33C72CA82B6FA31200D8DADD /* PickApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		33C72B842B6D546A00D8DADD /* PickAppTests */ = {
@@ -627,7 +633,7 @@
 			);
 			name = PickAppTests;
 			productName = PickAppTests;
-			productReference = 33C72C872B6E819E00D8DADD /* PickAppTests.xctest */;
+			productReference = 33C72CA92B6FA31200D8DADD /* PickAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		33C72B8E2B6D546B00D8DADD /* PickAppUITests */ = {
@@ -645,7 +651,7 @@
 			);
 			name = PickAppUITests;
 			productName = PickAppUITests;
-			productReference = 33C72C882B6E819E00D8DADD /* PickAppUITests.xctest */;
+			productReference = 33C72CAA2B6FA31200D8DADD /* PickAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -768,6 +774,7 @@
 				33C72C9E2B6EE62600D8DADD /* APIRouterStruct.swift in Sources */,
 				33C72C322B6D639B00D8DADD /* FlowTabbarAssemblyProtocol.swift in Sources */,
 				33C72C222B6D639B00D8DADD /* FlowNavigationController.swift in Sources */,
+				33C72CAC2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift in Sources */,
 				33C72C332B6D639B00D8DADD /* FlowTabbarPresenter.swift in Sources */,
 				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
 				33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */,
