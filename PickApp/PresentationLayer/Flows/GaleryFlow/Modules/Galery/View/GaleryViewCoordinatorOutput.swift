@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GaleryViewCoordinatorOutput: Presentable {
-    
+    var onImageCell: ((_ id: String) -> Void)? { get set }
 }

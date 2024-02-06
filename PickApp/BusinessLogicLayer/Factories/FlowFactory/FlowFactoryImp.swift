@@ -19,6 +19,13 @@ extension FlowFactoryImp: GaleryFlowFactory {
     func produceGaleryOutput() -> GaleryViewCoordinatorOutput {
         return GaleryViewController()
     }
+    
+    func produceFullScreenImageOutput(with id: String) -> FullScreenImageViewCoordinatorOutput? {
+        guard let photo = Storage.shared.getPhoto(with: id) else {
+            return nil
+        }
+        return FullScreenImageViewController(photo: photo)
+    }
 }
 
 extension FlowFactoryImp: FavoritesFlowFactory {

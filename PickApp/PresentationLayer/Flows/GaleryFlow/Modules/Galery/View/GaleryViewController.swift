@@ -13,8 +13,9 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     
     var output: GaleryViewOutput!
     var assembler: GaleryAssemblyProtocol = GaleryAssembly()
+    var onImageCell: ((String) -> Void)?
     
-    private var photosData: [Photo] = []
+    private var photosData: [PhotoResponse] = []
     private var collectionView: UICollectionView!
     
     private lazy var session: Session = {
@@ -44,7 +45,7 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     
     func getRandomPhoto(_ apiKeys: APIKeys) {
         let apiRouterStruct = APIRouterStruct(.randomPhoto, apiKeys)
-        let photosPromise:  Promise<Photo> = session.request(apiRouterStruct)
+        let photosPromise:  Promise<PhotoResponse> = session.request(apiRouterStruct)
         firstly {
             photosPromise
         }
@@ -58,7 +59,7 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     
     func getPhotos(_ apiKeys: APIKeys) {
         let apiRouterStruct = APIRouterStruct(.photos, apiKeys)
-        let photosPromise:  Promise<[Photo]> = session.request(apiRouterStruct)
+        let photosPromise:  Promise<[PhotoResponse]> = session.request(apiRouterStruct)
         firstly {
             photosPromise
         }
@@ -73,7 +74,7 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     
 }
 
-extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     func collectionViewSetup() {
         let layout = UICollectionViewFlowLayout()
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
@@ -93,7 +94,6 @@ extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDele
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCellIdentifier", for: indexPath) as? PhotoCollectionViewCell else {
             return UICollectionViewCell()
         }
-
         let photo = photosData[indexPath.item]
         if let imageURL = URL(string: photo.urls!.small) {
             DispatchQueue.global().async {
@@ -101,6 +101,7 @@ extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDele
                     let image = UIImage(data: imageData)
                     DispatchQueue.main.async {
                         cell.imageView.image = image
+                        Storage.shared.addPhoto(photoResponse: photo, image: image)
                     }
                 }
             }
@@ -112,5 +113,12 @@ extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = self.view.frame.width / 3 - 10
         return CGSize(width: cellSize , height: cellSize)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let tappedID = photosData[indexPath.item].id else {
+            return
+        }
+        output.onImageCellTap(with: tappedID)
     }
 }

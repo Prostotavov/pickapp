@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol GaleryViewOutput: AnyObject {
     
+    func onImageCellTap(with id: String)
 }
