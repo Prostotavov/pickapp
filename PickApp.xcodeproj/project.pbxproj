@@ -85,6 +85,8 @@
 		33C72CF32B725F0300D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF22B725F0300D8DADD /* Photo.swift */; };
 		33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */; };
 		33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF92B72745800D8DADD /* GaleryView.swift */; };
+		33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFC2B7287F300D8DADD /* FavoritesView.swift */; };
+		33C72CFF2B72D6A100D8DADD /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,8 @@
 		33C72CF22B725F0300D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		33C72CF92B72745800D8DADD /* GaleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryView.swift; sourceTree = "<group>"; };
+		33C72CFC2B7287F300D8DADD /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +386,7 @@
 				33C72BE72B6D639B00D8DADD /* FavoritesViewController.swift */,
 				33C72BE82B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift */,
 				33C72BE92B6D639B00D8DADD /* FavoritesViewOutput.swift */,
+				33C72CFB2B72877F00D8DADD /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				33C72C8D2B6E878600D8DADD /* APIHelpers */,
 				33C72C922B6E879E00D8DADD /* APIModel */,
 				33C72C892B6E81FA00D8DADD /* APIRouter.swift */,
+				33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */,
 				33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */,
 				33C72C8B2B6E85E700D8DADD /* Response Model */,
 			);
@@ -696,6 +702,14 @@
 			isa = PBXGroup;
 			children = (
 				33C72CF92B72745800D8DADD /* GaleryView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		33C72CFB2B72877F00D8DADD /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				33C72CFC2B7287F300D8DADD /* FavoritesView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -859,6 +873,7 @@
 				33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */,
 				33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */,
 				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
+				33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
 				33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */,
 				33C72C2E2B6D639B00D8DADD /* FavoritesInteractor.swift in Sources */,
@@ -904,6 +919,7 @@
 				33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */,
 				33C72C382B6D639B00D8DADD /* FlowTabbarViewOutput.swift in Sources */,
 				33C72C412B6D639B00D8DADD /* GaleryViewCoordinatorOutput.swift in Sources */,
+				33C72CFF2B72D6A100D8DADD /* ImageLoader.swift in Sources */,
 				33C72C482B6D639B00D8DADD /* FlowFactoryImp.swift in Sources */,
 				33C72C432B6D639B00D8DADD /* GaleryViewController.swift in Sources */,
 				33C72C422B6D639B00D8DADD /* GaleryViewOutput.swift in Sources */,

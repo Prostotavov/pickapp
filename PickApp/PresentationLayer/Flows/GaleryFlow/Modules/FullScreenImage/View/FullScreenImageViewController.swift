@@ -102,7 +102,7 @@ class FullScreenImageViewController: UIViewController, FullScreenImageViewInput,
     }
     
     @objc func likeButtonPressed() {
-        print("like [id:\(photo.id)]")
+        output.onLikePressed(with: photo.id)
     }
 }
 

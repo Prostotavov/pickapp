@@ -11,10 +11,12 @@ struct APIHeaders {
     var contentType: String = "application/json"
     var accessKey: String
     
-    func getHeaders() -> HTTPHeaders {
+    func getHeaders(isNeedAuth: Bool) -> HTTPHeaders {
         var headersDictionary: [String: String] = [:]
         headersDictionary["Content-Type"] = contentType
-        headersDictionary["Authorization"] = "Client-ID \(accessKey)"
+        if isNeedAuth {
+            headersDictionary["Authorization"] = "Client-ID \(accessKey)"
+        }
         return HTTPHeaders(headersDictionary)
     }
 }

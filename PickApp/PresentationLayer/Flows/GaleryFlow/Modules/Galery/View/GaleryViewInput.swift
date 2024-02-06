@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GaleryViewInput: AnyObject {
-    
+    func reloadCollectionView(with photos: [Photo])
 }

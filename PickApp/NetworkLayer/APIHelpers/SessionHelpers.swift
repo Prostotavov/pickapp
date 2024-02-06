@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import PromiseKit
+import UIKit
 
 enum InternalError: LocalizedError {
     case unexpected

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput {
+class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     
     weak var view: GaleryViewInput!
     weak var coordinator: GaleryViewCoordinatorOutput!
@@ -16,5 +16,11 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput {
     
     func onImageCellTap(with id: String) {
         coordinator.onImageCell?(id)
+    }
+    
+    func newPhotosAdded(_ photos: [Photo]) {
+        DispatchQueue.main.async {
+            self.view.reloadCollectionView(with: photos)
+        }
     }
 }

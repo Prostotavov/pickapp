@@ -14,7 +14,7 @@ protocol PhotoCollectionViewDelegate: AnyObject {
 class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var collectionView: UICollectionView?
-    var photosData: [PhotoResponse] = []
+    var photos: [Photo] = []
     weak var delegate: PhotoCollectionViewDelegate!
     
     override init(frame: CGRect) {
@@ -56,31 +56,16 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let photo = photosData[indexPath.item]
-        if let imageURL = URL(string: photo.urls!.small) {
-            DispatchQueue.global().async {
-                if let imageData = try? Data(contentsOf: imageURL) {
-                    let image = UIImage(data: imageData)
-                    DispatchQueue.main.async {
-                        cell.imageView.image = image
-                        Storage.shared.addPhoto(photoResponse: photo, image: image)
-                    }
-                }
-            }
-        }
-
+        cell.imageView.image = photos[indexPath.item].image
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photosData.count
+        return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let tappedID = photosData[indexPath.item].id else {
-            return
-        }
-        delegate.onImageCellTap(with: tappedID)
+        delegate.onImageCellTap(with: photos[indexPath.item].id)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -88,7 +73,8 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         return CGSize(width: cellSize, height: cellSize)
     }
     
-    func reloadData() {
+    func reloadData(with photos: [Photo]) {
+        self.photos = photos
         collectionView?.reloadData()
     }
 }

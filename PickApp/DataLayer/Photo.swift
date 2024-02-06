@@ -10,7 +10,7 @@ import UIKit
 
 struct Photo {
     let id, url: String
-    let image: UIImage?
+    var image: UIImage?
     let description, altDescription: String?
     let width, height: Int?
     

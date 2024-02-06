@@ -16,4 +16,8 @@ class FullScreenImagePresenter: FullScreenImageViewOutput, FullScreenImageIntera
     func onBackPressed() {
         coordinator.onBack?()
     }
+    
+    func onLikePressed(with id: String) {
+        interactor.likePhoto(with: id)
+    }
 }

@@ -47,9 +47,11 @@ struct APIRouterStruct: URLRequestConvertible {
         
         urlRequest.httpMethod = apiRouter.method.rawValue
         urlRequest.timeoutInterval = 20
-        urlRequest.headers = headers.getHeaders()
+        urlRequest.headers = headers.getHeaders(isNeedAuth: apiRouter.idNeedAuth)
         
         print("urlRequest: \(urlRequest)")
         return urlRequest
     }
+    
+    
 }

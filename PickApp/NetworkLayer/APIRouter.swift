@@ -21,9 +21,12 @@ enum APIRouter: APIRouterProtocol {
     
     case photos
     case randomPhoto
+    case loadImage(_ url: String)
     
     var baseURL: String {
         switch self {
+        case let .loadImage(url):
+            return url
         default:
             return "https://api.unsplash.com"
         }
@@ -31,9 +34,7 @@ enum APIRouter: APIRouterProtocol {
     
     var method: HTTPMethod {
         switch self {
-        case .photos:
-            return .get
-        case .randomPhoto:
+        default:
             return .get
         }
     }
@@ -44,6 +45,8 @@ enum APIRouter: APIRouterProtocol {
             return "/photos"
         case .randomPhoto:
             return "/photos/random"
+        default:
+            return ""
         }
     }
     
@@ -65,6 +68,15 @@ enum APIRouter: APIRouterProtocol {
         switch self {
         default:
             return nil
+        }
+    }
+    
+    var idNeedAuth: Bool {
+        switch self {
+        case .loadImage:
+            return false
+        default:
+            return true
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  GaleryView.swift
+//  FavoritesView.swift
 //  PickApp
 //
 //  Created by Roma on 6.02.24.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol GaleryViewDelegate: AnyObject {
+protocol FavoritesViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
 }
 
-class GaleryView: UIView {
+class FavoritesView: UIView {
     
     let photoCollectionView = PhotoCollectionView()
     
-    weak var delegate: GaleryViewDelegate!
+    weak var delegate: FavoritesViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,7 +44,7 @@ class GaleryView: UIView {
     }
 }
 
-extension GaleryView: PhotoCollectionViewDelegate {
+extension FavoritesView: PhotoCollectionViewDelegate {
     func onImageCellTap(with id: String) {
         delegate.onImageCellTap(with: id)
     }
