@@ -7,10 +7,15 @@
 
 import Foundation
 
-class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput {
+class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, StorageFavoritesOutput {
 
     weak var view: FavoritesViewInput!
     weak var coordinator: FavoritesViewCoordinatorOutput!
     var interactor: FavoritesInteractorInput!
     
+    func newPhotosLiked(_ photos: [Photo]) {
+        DispatchQueue.main.async {
+            self.view.reloadCollectionView(with: photos)
+        }
+    }
 }

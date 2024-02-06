@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FavoritesViewInput: AnyObject {
-    
+    func reloadCollectionView(with photos: [Photo])
 }

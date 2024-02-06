@@ -27,7 +27,7 @@ class FavoritesAssembly: FavoritesAssemblyProtocol {
         interactor.output = presenter
         
         viewController.output = presenter
-        
+        Storage.shared.favoritesOutput = presenter
     }
     
 }

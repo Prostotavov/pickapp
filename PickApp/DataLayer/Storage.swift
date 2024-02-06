@@ -8,8 +8,12 @@
 import Foundation
 import UIKit
 
-protocol StorageOutput: AnyObject {
+protocol StorageGaleryOutput: AnyObject {
     func newPhotosAdded(_ photos: [Photo])
+}
+
+protocol StorageFavoritesOutput: AnyObject {
+    func newPhotosLiked(_ photos: [Photo])
 }
 
 struct Storage {
@@ -19,7 +23,8 @@ struct Storage {
     private var photos: [Photo]
     private var likedPhotos: [String]
     
-    weak var output: StorageOutput!
+    weak var galeryOutput: StorageGaleryOutput!
+    weak var favoritesOutput: StorageFavoritesOutput!
     
     init() {
         photos = []
@@ -45,7 +50,7 @@ struct Storage {
                 continue
             }
         }
-        output.newPhotosAdded(photos)
+        galeryOutput.newPhotosAdded(photos)
     }
     
     mutating func addPhoto(photoResponse: PhotoResponse, image: UIImage?) {
@@ -55,11 +60,11 @@ struct Storage {
                     photos[index].image = image
                 }
             }
-            output.newPhotosAdded(photos)
+            galeryOutput.newPhotosAdded(photos)
             return
         }
         photos.append(Photo(photoResponse: photoResponse, image: image))
-        output.newPhotosAdded(photos)
+        galeryOutput.newPhotosAdded(photos)
     }
     
     func getPhoto(with id: String) -> Photo? {
@@ -75,6 +80,7 @@ struct Storage {
             return
         }
         likedPhotos.append(photo.id)
+        favoritesOutput.newPhotosLiked(getLikedPhotos())
     }
     
     mutating func unlikePhoto(with id: String) {
@@ -82,6 +88,7 @@ struct Storage {
             return
         }
         likedPhotos.removeAll { $0 == id }
+        favoritesOutput.newPhotosLiked(getLikedPhotos())
     }
     
 }

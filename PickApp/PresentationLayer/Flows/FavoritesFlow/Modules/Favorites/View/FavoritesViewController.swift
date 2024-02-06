@@ -28,6 +28,10 @@ class FavoritesViewController: UIViewController, FavoritesViewInput, FavoritesVi
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func reloadCollectionView(with photos: [Photo]) {
+        favoritesView.reloadData(with: photos)
+    }
 }
 
 extension FavoritesViewController: FavoritesViewDelegate {
