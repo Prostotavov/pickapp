@@ -8,6 +8,8 @@
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
+    
+    static let identifier = "PhotoCollectionViewCell"
     var imageView: UIImageView!
 
     override init(frame: CGRect) {
