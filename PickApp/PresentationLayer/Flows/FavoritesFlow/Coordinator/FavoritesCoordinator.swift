@@ -26,7 +26,22 @@ class FavoritesCoordinator: BaseCoordinator, FavoritesCoordinatorOutput {
 
     private func showFavorites() {
         let favoritesOutput = factory.produceFavoritesOutput()
+        
+        favoritesOutput.onImageCell = { [weak self] (id) in
+            self?.showFullScreenImage(with: id)
+        }
+        
         router.setRootModule(favoritesOutput, hideBar: true)
+    }
+    
+    private func showFullScreenImage(with id: String) {
+        let fullScreenImageOutput = factory.produceFullScreenImageOutput(with: id)
+        
+        fullScreenImageOutput?.onBack = { [weak self] in
+            self?.router.dismissModule(animated: false, completion: nil)
+        }
+        
+        router.present(fullScreenImageOutput, animated: false)
     }
     
 }

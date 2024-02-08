@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FavoritesViewCoordinatorOutput: Presentable {
-    
+    var onImageCell: ((_ id: String) -> Void)? { get set }
 }

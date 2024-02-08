@@ -27,5 +27,8 @@ class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, DBMana
         }
     }
     
+    func onImageCellTap(with id: String) {
+        coordinator.onImageCell?(id)
+    }
     
 }

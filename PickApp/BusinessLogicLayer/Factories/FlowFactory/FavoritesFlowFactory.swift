@@ -10,4 +10,5 @@ import Foundation
 protocol FavoritesFlowFactory {
     
     func produceFavoritesOutput() -> FavoritesViewCoordinatorOutput
+    func produceFullScreenImageOutput(with id: String) -> FullScreenImageViewCoordinatorOutput?
 }
