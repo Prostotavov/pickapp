@@ -23,7 +23,7 @@ class FavoritesViewController: UIViewController, FavoritesViewInput, FavoritesVi
     override func viewDidLoad() {
         super.viewDidLoad()
         assembler.assemblyModuleForViewInput(viewInput: self)
-        view.backgroundColor = .brown
+        view.backgroundColor = .white
         output.loadView()
     }
 

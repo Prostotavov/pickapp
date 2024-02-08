@@ -15,6 +15,8 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
     var onGaleryFlow: ((UINavigationController) -> Void)?
     var onFavoritesFlow: ((UINavigationController) -> Void)?
     
+    let topPanelOffset: CGFloat = 40
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
@@ -23,14 +25,33 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.backgroundColor = .white
         let nvc1 = UINavigationController()
         let nvc2 = UINavigationController()
+
         let controllers = [nvc1, nvc2]
         self.viewControllers = controllers
+        
+        
         startRootFlows()
+        setupTopPanel()
+        setupCV(withIndex: 0)
     }
     
-    func startRootFlows() {
+    private func setupCV(withIndex index: Int) {
+        for i in (0..<self.viewControllers!.count) {
+            self.viewControllers![i].view.translatesAutoresizingMaskIntoConstraints = false
+            if i != index { continue }
+            NSLayoutConstraint.activate([
+                self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset + 5),
+                self.viewControllers![i].view!.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            ])
+        }
+    }
+    
+    private func startRootFlows() {
         
         if let controller = viewControllers?[0] as? UINavigationController {
             onGaleryFlow?(controller)
@@ -48,6 +69,19 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         setTabbarItems()
     }
     
+    private func setupTopPanel() {
+        let gradientView = TopPanelView(frame: .zero)
+        self.view.addSubview(gradientView)
+        
+        gradientView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            gradientView.topAnchor.constraint(equalTo: view.topAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset),
+            gradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            gradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        ])
+    }
+    
     private func setTabbarItems() {
         
         tabBar.items![0].title = "Galery"
@@ -57,6 +91,11 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         tabBar.items![1].title = "Favorites"
         tabBar.items![1].image = UIImage(systemName: "person.circle")
         tabBar.items![1].selectedImage = UIImage(systemName: "person.circle.fill")
+        
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        setupCV(withIndex: tabBarController.selectedIndex)
         
     }
     

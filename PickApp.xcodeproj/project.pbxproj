@@ -93,6 +93,9 @@
 		33C72D092B73F68D00D8DADD /* DBPhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */; };
 		33C72D0B2B74E08A00D8DADD /* DBPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */; };
 		33C72D112B7526BC00D8DADD /* DBCollecionNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */; };
+		33C72D152B752CBA00D8DADD /* TopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D142B752CBA00D8DADD /* TopPanelView.swift */; };
+		33C72D182B752F6700D8DADD /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D172B752F6700D8DADD /* UIColor+Hex.swift */; };
+		33C72D1A2B7533A200D8DADD /* EdgeShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +202,9 @@
 		33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhotoCollection.swift; sourceTree = "<group>"; };
 		33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoto.swift; sourceTree = "<group>"; };
 		33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCollecionNames.swift; sourceTree = "<group>"; };
+		33C72D142B752CBA00D8DADD /* TopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPanelView.swift; sourceTree = "<group>"; };
+		33C72D172B752F6700D8DADD /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeShadowLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +267,7 @@
 				33C72B742B6D546800D8DADD /* SceneDelegate.swift */,
 				33C72BC32B6D620900D8DADD /* Protocols */,
 				33C72BCA2B6D622700D8DADD /* Coordinator */,
+				33C72D162B752F4E00D8DADD /* Extensions */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 		33C72BD62B6D639B00D8DADD /* ReuseableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				33C72D132B752CA900D8DADD /* GradientViews */,
 				33C72CF72B726FA900D8DADD /* PhotoCollectionView */,
 				33C72BD72B6D639B00D8DADD /* FlowNavigationController */,
 			);
@@ -467,6 +475,7 @@
 				33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */,
 				33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */,
 				33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */,
+				33C72D1D2B755FD400D8DADD /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,6 +763,30 @@
 			path = LocalDB;
 			sourceTree = "<group>";
 		};
+		33C72D132B752CA900D8DADD /* GradientViews */ = {
+			isa = PBXGroup;
+			children = (
+				33C72D142B752CBA00D8DADD /* TopPanelView.swift */,
+				33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */,
+			);
+			path = GradientViews;
+			sourceTree = "<group>";
+		};
+		33C72D162B752F4E00D8DADD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33C72D172B752F6700D8DADD /* UIColor+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33C72D1D2B755FD400D8DADD /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -919,6 +952,7 @@
 				33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
 				33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */,
+				33C72D182B752F6700D8DADD /* UIColor+Hex.swift in Sources */,
 				33C72C2E2B6D639B00D8DADD /* FavoritesInteractor.swift in Sources */,
 				33C72C352B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift in Sources */,
 				33C72C252B6D639B00D8DADD /* FavoritesAssembly.swift in Sources */,
@@ -928,12 +962,14 @@
 				33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */,
 				33C72C3F2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift in Sources */,
 				33C72CE82B724A1000D8DADD /* FullScreenImageViewOutput.swift in Sources */,
+				33C72D1A2B7533A200D8DADD /* EdgeShadowLayer.swift in Sources */,
 				33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */,
 				33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */,
 				33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */,
 				33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */,
 				33C72C962B6E879E00D8DADD /* APIHeaders.swift in Sources */,
 				33C72CEC2B724A1000D8DADD /* FullScreenImageInteractorOutput.swift in Sources */,
+				33C72D152B752CBA00D8DADD /* TopPanelView.swift in Sources */,
 				33C72C292B6D639B00D8DADD /* FavoritesViewController.swift in Sources */,
 				33C72C9A2B6E8CE900D8DADD /* PhotoResponse.swift in Sources */,
 				33C72C902B6E878600D8DADD /* ConnectionSettings.swift in Sources */,

@@ -26,7 +26,7 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     override func viewDidLoad() {
         super.viewDidLoad()
         assembler.assemblyModuleForViewInput(viewInput: self)
-        view.backgroundColor = .purple
+        view.backgroundColor = .white
     }
     
     override var prefersStatusBarHidden: Bool {
