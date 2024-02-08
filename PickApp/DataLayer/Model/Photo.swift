@@ -34,6 +34,16 @@ struct Photo {
         self.height = photoResponse.height
     }
     
+    init(dbPhoto: DBPhoto) {
+        self.id = dbPhoto.id
+        self.url = dbPhoto.url
+        self.image = UIImage(data: dbPhoto.imageData)
+        self.description = dbPhoto.imagedescription
+        self.altDescription = dbPhoto.altDescription
+        self.width = dbPhoto.width
+        self.height = dbPhoto.height
+    }
+    
     init() {
         self.id = ""
         self.url = ""

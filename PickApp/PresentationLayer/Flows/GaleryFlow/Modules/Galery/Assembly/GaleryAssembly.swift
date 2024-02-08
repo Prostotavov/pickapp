@@ -26,7 +26,7 @@ class GaleryAssembly: NSObject, GaleryAssemblyProtocol {
         
         interactor.output = presenter
         viewController.output = presenter
-        Storage.shared.galeryOutput = presenter
+        TempImageStorage.shared.output = presenter
     }
     
 }

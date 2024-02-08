@@ -81,7 +81,7 @@
 		33C72CEA2B724A1000D8DADD /* FullScreenImageInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */; };
 		33C72CEB2B724A1000D8DADD /* FullScreenImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */; };
 		33C72CEC2B724A1000D8DADD /* FullScreenImageInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */; };
-		33C72CF12B725D3200D8DADD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* Storage.swift */; };
+		33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* TempImageStorage.swift */; };
 		33C72CF32B725F0300D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF22B725F0300D8DADD /* Photo.swift */; };
 		33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */; };
 		33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF92B72745800D8DADD /* GaleryView.swift */; };
@@ -92,6 +92,7 @@
 		33C72D072B73F63600D8DADD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72D062B73F63600D8DADD /* RealmSwift */; };
 		33C72D092B73F68D00D8DADD /* DBPhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */; };
 		33C72D0B2B74E08A00D8DADD /* DBPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */; };
+		33C72D112B7526BC00D8DADD /* DBCollecionNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,7 +189,7 @@
 		33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorInput.swift; sourceTree = "<group>"; };
 		33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractor.swift; sourceTree = "<group>"; };
 		33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorOutput.swift; sourceTree = "<group>"; };
-		33C72CF02B725D3200D8DADD /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		33C72CF02B725D3200D8DADD /* TempImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempImageStorage.swift; sourceTree = "<group>"; };
 		33C72CF22B725F0300D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		33C72CF92B72745800D8DADD /* GaleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryView.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		33C72D022B73F5D400D8DADD /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhotoCollection.swift; sourceTree = "<group>"; };
 		33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoto.swift; sourceTree = "<group>"; };
+		33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCollecionNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,12 +607,12 @@
 		33C72C5D2B6DB45100D8DADD /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */,
 				33C72C892B6E81FA00D8DADD /* APIRouter.swift */,
 				33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */,
 				33C72C8D2B6E878600D8DADD /* APIHelpers */,
 				33C72C922B6E879E00D8DADD /* APIModel */,
 				33C72C8B2B6E85E700D8DADD /* Response Model */,
+				33C72D0E2B75267600D8DADD /* ImageLoader */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -693,10 +695,7 @@
 		33C72CEF2B725D1B00D8DADD /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				33C72CF02B725D3200D8DADD /* Storage.swift */,
-				33C72D022B73F5D400D8DADD /* DBManager.swift */,
-				33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */,
-				33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */,
+				33C72D0F2B75269F00D8DADD /* LocalDB */,
 				33C72D002B72F79000D8DADD /* Model */,
 			);
 			path = DataLayer;
@@ -733,6 +732,26 @@
 				33C72CF22B725F0300D8DADD /* Photo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		33C72D0E2B75267600D8DADD /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */,
+				33C72CF02B725D3200D8DADD /* TempImageStorage.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		33C72D0F2B75269F00D8DADD /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				33C72D022B73F5D400D8DADD /* DBManager.swift */,
+				33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */,
+				33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */,
+				33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */,
+			);
+			path = LocalDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -904,6 +923,7 @@
 				33C72C352B6D639B00D8DADD /* FlowTabbarCoordinatorOutput.swift in Sources */,
 				33C72C252B6D639B00D8DADD /* FavoritesAssembly.swift in Sources */,
 				33C72D092B73F68D00D8DADD /* DBPhotoCollection.swift in Sources */,
+				33C72D112B7526BC00D8DADD /* DBCollecionNames.swift in Sources */,
 				33C72CEA2B724A1000D8DADD /* FullScreenImageInteractorInput.swift in Sources */,
 				33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */,
 				33C72C3F2B6D639B00D8DADD /* GaleryAssemblyProtocol.swift in Sources */,
@@ -939,7 +959,7 @@
 				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
 				33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */,
 				33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */,
-				33C72CF12B725D3200D8DADD /* Storage.swift in Sources */,
+				33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */,
 				33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */,
 				33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */,
 				33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */,

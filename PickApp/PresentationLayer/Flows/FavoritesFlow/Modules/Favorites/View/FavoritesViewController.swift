@@ -16,13 +16,13 @@ class FavoritesViewController: UIViewController, FavoritesViewInput, FavoritesVi
     override func loadView() {
         favoritesView.delegate = self
         view = favoritesView
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assembler.assemblyModuleForViewInput(viewInput: self)
         view.backgroundColor = .brown
+        output.loadView()
     }
 
     override var prefersStatusBarHidden: Bool {

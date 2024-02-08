@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FavoritesViewOutput: AnyObject {
-
+    func loadView()
 }

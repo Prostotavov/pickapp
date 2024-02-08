@@ -7,15 +7,25 @@
 
 import Foundation
 
-class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, StorageFavoritesOutput {
+class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, DBManagerOutput {
 
     weak var view: FavoritesViewInput!
     weak var coordinator: FavoritesViewCoordinatorOutput!
     var interactor: FavoritesInteractorInput!
     
-    func newPhotosLiked(_ photos: [Photo]) {
+    func newPhotosLiked() {
         DispatchQueue.main.async {
-            self.view.reloadCollectionView(with: photos)
+            let favPhotos = DBManager.shared.getPhotos(fromCollectionWithName: .favorites)
+            self.view.reloadCollectionView(with: favPhotos)
         }
     }
+    
+    func loadView() {
+        DispatchQueue.main.async {
+            let favPhotos = DBManager.shared.getPhotos(fromCollectionWithName: .favorites)
+            self.view.reloadCollectionView(with: favPhotos)
+        }
+    }
+    
+    
 }

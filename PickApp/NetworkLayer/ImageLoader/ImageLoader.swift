@@ -34,7 +34,7 @@ class ImageLoader {
             photosPromise
         }
         .done { photos in
-            Storage.shared.addPhotos(photosResponse: photos, images: [])
+            TempImageStorage.shared.addPhotos(photosResponse: photos, images: [])
             self.photosResponse = photos
             self.getAndStoreImages()
         }
@@ -52,7 +52,7 @@ class ImageLoader {
                 guard let imageData = try? Data(contentsOf: imageURL) else {
                     return
                 }
-                Storage.shared.addPhoto(photoResponse: photo, image: UIImage(data: imageData))
+                TempImageStorage.shared.addPhoto(photoResponse: photo, image: UIImage(data: imageData))
             }
         }
     }

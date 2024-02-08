@@ -8,12 +8,7 @@
 import Foundation
 import RealmSwift
 
-enum CollecionNames: String {
-    case favorites
-}
-
 class DBPhotoCollection: Object {
-    @Persisted(primaryKey: true) var id: UUID = UUID()
-    @Persisted var name: String
+    @Persisted(primaryKey: true) var name: String
     @Persisted var photos: List<DBPhoto>
 }
