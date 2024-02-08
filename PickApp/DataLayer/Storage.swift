@@ -64,7 +64,7 @@ struct Storage {
             return
         }
         photos.append(Photo(photoResponse: photoResponse, image: image))
-        galeryOutput.newPhotosAdded(photos)
+        galeryOutput .newPhotosAdded(photos)
     }
     
     func getPhoto(with id: String) -> Photo? {
@@ -79,7 +79,7 @@ struct Storage {
         guard let photo = getPhoto(with: id) else {
             return
         }
-        likedPhotos.append(photo.id)
+//        likedPhotos.append(photo.id)
         favoritesOutput.newPhotosLiked(getLikedPhotos())
     }
     

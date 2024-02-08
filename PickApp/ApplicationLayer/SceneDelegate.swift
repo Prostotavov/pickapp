@@ -26,6 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         applicationCoordinator = produceApplicationCoordinator(rootController: rootController)
         applicationCoordinator.start()
         
+        setupReamlCollections()
+        
         window?.makeKeyAndVisible()
     }
     
@@ -37,6 +39,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return ApplicationCoordinator(router: router,
                                       coordinatorFactory: coordinatorFactory,
                                       flowFactory: flowCoordinator)
+    }
+    
+    private func setupReamlCollections() {
+        DBManager.shared.createPhotoCollection(name: .favorites)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
