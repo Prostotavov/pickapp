@@ -158,6 +158,15 @@ class DBManager {
         return isExist
     }
     
+    func deleteAllData() {
+        do {
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
+            print("Error deleting all data in Realm: \(error)")
+        }
+    }
     
 }
 
