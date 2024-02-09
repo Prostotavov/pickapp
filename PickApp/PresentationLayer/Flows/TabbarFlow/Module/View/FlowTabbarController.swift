@@ -28,6 +28,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         view.backgroundColor = .white
         let nvc1 = UINavigationController()
         let nvc2 = UINavigationController()
+//        let nvc3 = UINavigationController()
 
         let controllers = [nvc1, nvc2]
         self.viewControllers = controllers
@@ -36,6 +37,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         startRootFlows()
         setupTopPanel()
         setupCV(withIndex: 0)
+        setTabbar()
     }
     
     private func setupCV(withIndex index: Int) {
@@ -62,13 +64,6 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        setItemsImageInsets()
-        setTabbarItems()
-    }
-    
     private func setupTopPanel() {
         let gradientView = TopPanelView(frame: .zero)
         self.view.addSubview(gradientView)
@@ -82,31 +77,55 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         ])
     }
     
-    private func setTabbarItems() {
+    private func setTabbar() {
+        self.tabBar.isHidden = true
         
-        tabBar.items![0].title = "Galery"
-        tabBar.items![0].image = UIImage(systemName: "house.circle")
-        tabBar.items![0].selectedImage = UIImage(systemName: "house.circle.fill")
+        let height = tabBar.frame.height + 20
+        let width = tabBar.frame.width
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        let bottomTB = BottobTabbarView(frame: frame)
+        bottomTB.delegate = self
+        view.addSubview(bottomTB)
+        bottomTB.translatesAutoresizingMaskIntoConstraints = false
         
-        tabBar.items![1].title = "Favorites"
-        tabBar.items![1].image = UIImage(systemName: "person.circle")
-        tabBar.items![1].selectedImage = UIImage(systemName: "person.circle.fill")
-        
+        NSLayoutConstraint.activate([
+            bottomTB.heightAnchor.constraint(equalToConstant: height),
+            bottomTB.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomTB.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomTB.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        ])
+    }
+    
+    func createImageWithBackgroundColor(color: UIColor, size: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { context in
+            color.setFill()
+            context.fill(CGRect(origin: .zero, size: size))
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        return true
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         setupCV(withIndex: tabBarController.selectedIndex)
-        
-    }
-    
-    private func setItemsImageInsets() {
-        
-        tabBar.items?.forEach({ (item) in
-            item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-        })
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
+}
+
+extension FlowTabbarController: BottobTabbarViewDelegate {
+    
+    func buttonPressed(withIndex index: Int) {
+        guard index >= 0 && index < viewControllers?.count ?? 0 else {
+            return
+        }
+        if tabBarController(self, shouldSelect: viewControllers?[index] ?? UIViewController()) {
+            selectedIndex = index
+            tabBarController(self, didSelect: viewControllers?[index] ?? UIViewController())
+        }
+    }
+    
 }

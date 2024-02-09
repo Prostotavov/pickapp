@@ -96,6 +96,9 @@
 		33C72D152B752CBA00D8DADD /* TopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D142B752CBA00D8DADD /* TopPanelView.swift */; };
 		33C72D182B752F6700D8DADD /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D172B752F6700D8DADD /* UIColor+Hex.swift */; };
 		33C72D1A2B7533A200D8DADD /* EdgeShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */; };
+		33C72D1F2B75839A00D8DADD /* GradientTabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D1E2B75839A00D8DADD /* GradientTabbarButton.swift */; };
+		33C72D222B75FF0600D8DADD /* BottobTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D212B75FF0600D8DADD /* BottobTabbarView.swift */; };
+		33C72D262B7631EE00D8DADD /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C72D252B7631ED00D8DADD /* Lobster-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +208,9 @@
 		33C72D142B752CBA00D8DADD /* TopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPanelView.swift; sourceTree = "<group>"; };
 		33C72D172B752F6700D8DADD /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeShadowLayer.swift; sourceTree = "<group>"; };
+		33C72D1E2B75839A00D8DADD /* GradientTabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTabbarButton.swift; sourceTree = "<group>"; };
+		33C72D212B75FF0600D8DADD /* BottobTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottobTabbarView.swift; sourceTree = "<group>"; };
+		33C72D252B7631ED00D8DADD /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				33C72B7B2B6D546A00D8DADD /* Assets.xcassets */,
+				33C72D252B7631ED00D8DADD /* Lobster-Regular.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -475,7 +482,7 @@
 				33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */,
 				33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */,
 				33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */,
-				33C72D1D2B755FD400D8DADD /* SubViews */,
+				33C72D202B75FEA700D8DADD /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -767,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				33C72D142B752CBA00D8DADD /* TopPanelView.swift */,
+				33C72D1E2B75839A00D8DADD /* GradientTabbarButton.swift */,
 				33C72D192B7533A200D8DADD /* EdgeShadowLayer.swift */,
 			);
 			path = GradientViews;
@@ -780,9 +788,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		33C72D1D2B755FD400D8DADD /* SubViews */ = {
+		33C72D202B75FEA700D8DADD /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				33C72D212B75FF0600D8DADD /* BottobTabbarView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -904,6 +913,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C72B7F2B6D546A00D8DADD /* LaunchScreen.storyboard in Resources */,
+				33C72D262B7631EE00D8DADD /* Lobster-Regular.ttf in Resources */,
 				33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,6 +960,7 @@
 				33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */,
 				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
 				33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */,
+				33C72D1F2B75839A00D8DADD /* GradientTabbarButton.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
 				33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */,
 				33C72D182B752F6700D8DADD /* UIColor+Hex.swift in Sources */,
@@ -1009,6 +1020,7 @@
 				33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */,
 				33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */,
 				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
+				33C72D222B75FF0600D8DADD /* BottobTabbarView.swift in Sources */,
 				33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */,
 				33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */,
 				33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */,
