@@ -16,6 +16,9 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
     var onFavoritesFlow: ((UINavigationController) -> Void)?
     
     let topPanelOffset: CGFloat = 40
+    let side_offset: CGFloat = 5
+    
+    private var bottomTB: BottomTabbarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +31,15 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         view.backgroundColor = .white
         let nvc1 = UINavigationController()
         let nvc2 = UINavigationController()
-//        let nvc3 = UINavigationController()
+        let nvc3 = UINavigationController()
 
-        let controllers = [nvc1, nvc2]
+        let controllers = [nvc1, nvc2, nvc3]
         self.viewControllers = controllers
         
-        
+        setTabbar()
         startRootFlows()
         setupTopPanel()
         setupCV(withIndex: 0)
-        setTabbar()
     }
     
     private func setupCV(withIndex index: Int) {
@@ -45,10 +47,10 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
             self.viewControllers![i].view.translatesAutoresizingMaskIntoConstraints = false
             if i != index { continue }
             NSLayoutConstraint.activate([
-                self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset + 5),
-                self.viewControllers![i].view!.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset + side_offset),
+                self.viewControllers![i].view!.bottomAnchor.constraint(equalTo: bottomTB.topAnchor),
+                self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -side_offset),
+                self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: side_offset),
             ])
         }
     }
@@ -59,7 +61,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
             onGaleryFlow?(controller)
         }
         
-        if let controller = viewControllers?[1] as? UINavigationController {
+        if let controller = viewControllers?[2] as? UINavigationController {
             onFavoritesFlow?(controller)
         }
     }
@@ -83,7 +85,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         let height = tabBar.frame.height + 20
         let width = tabBar.frame.width
         let frame = CGRect(x: 0, y: 0, width: width, height: height)
-        let bottomTB = BottomTabbarView(frame: frame)
+        bottomTB = BottomTabbarView(frame: frame)
         bottomTB.delegate = self
         view.addSubview(bottomTB)
         bottomTB.translatesAutoresizingMaskIntoConstraints = false

@@ -17,6 +17,8 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     var photos: [Photo] = []
     weak var delegate: PhotoCollectionViewDelegate!
     
+    let cellOffset: CGFloat = 5
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionViewSetup()
@@ -30,8 +32,7 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     func collectionViewSetup() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        let cellSize = 110
-        layout.itemSize = CGSize(width: cellSize, height: cellSize)
+        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         guard let collectionView = collectionView else {return}
@@ -49,7 +50,6 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,8 +69,16 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize = self.frame.width / 3 - 10
-        return CGSize(width: cellSize, height: cellSize)
+        let cellWidth = (self.frame.width - cellOffset * 2) / 3
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return cellOffset
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return cellOffset
     }
     
     func reloadData(with photos: [Photo]) {
