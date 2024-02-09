@@ -99,6 +99,7 @@
 		33C72D1F2B75839A00D8DADD /* GradientTabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D1E2B75839A00D8DADD /* GradientTabbarButton.swift */; };
 		33C72D222B75FF0600D8DADD /* BottomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D212B75FF0600D8DADD /* BottomTabbarView.swift */; };
 		33C72D262B7631EE00D8DADD /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C72D252B7631ED00D8DADD /* Lobster-Regular.ttf */; };
+		33C72D282B76448500D8DADD /* PhotosParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D272B76448500D8DADD /* PhotosParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		33C72D1E2B75839A00D8DADD /* GradientTabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTabbarButton.swift; sourceTree = "<group>"; };
 		33C72D212B75FF0600D8DADD /* BottomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabbarView.swift; sourceTree = "<group>"; };
 		33C72D252B7631ED00D8DADD /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		33C72D272B76448500D8DADD /* PhotosParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,6 +639,7 @@
 			isa = PBXGroup;
 			children = (
 				33C72C992B6E8CE900D8DADD /* PhotoResponse.swift */,
+				33C72D272B76448500D8DADD /* PhotosParameter.swift */,
 			);
 			path = "Response Model";
 			sourceTree = "<group>";
@@ -979,6 +982,7 @@
 				33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */,
 				33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */,
 				33C72C962B6E879E00D8DADD /* APIHeaders.swift in Sources */,
+				33C72D282B76448500D8DADD /* PhotosParameter.swift in Sources */,
 				33C72CEC2B724A1000D8DADD /* FullScreenImageInteractorOutput.swift in Sources */,
 				33C72D152B752CBA00D8DADD /* TopPanelView.swift in Sources */,
 				33C72C292B6D639B00D8DADD /* FavoritesViewController.swift in Sources */,

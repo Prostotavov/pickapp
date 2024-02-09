@@ -28,7 +28,8 @@ class ImageLoader {
     }
     
     func loadImages() {
-        let apiRouterStruct = APIRouterStruct(.photos, apiKeys)
+        let params = PhotosParameter(page: 1, per_page: 28)
+        let apiRouterStruct = APIRouterStruct(.photos(params), apiKeys)
         let photosPromise:  Promise<[PhotoResponse]> = session.request(apiRouterStruct)
         firstly {
             photosPromise

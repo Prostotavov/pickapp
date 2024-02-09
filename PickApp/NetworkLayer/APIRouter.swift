@@ -19,7 +19,7 @@ protocol APIRouterProtocol {
 
 enum APIRouter: APIRouterProtocol {
     
-    case photos
+    case photos(_ params: PhotosParameter)
     case randomPhoto
     case loadImage(_ url: String)
     
@@ -59,6 +59,8 @@ enum APIRouter: APIRouterProtocol {
     
     var parameters: Parameters? {
         switch self {
+        case let .photos(params):
+            return params.parametersForAPIRequest()
         default:
             return nil
         }
