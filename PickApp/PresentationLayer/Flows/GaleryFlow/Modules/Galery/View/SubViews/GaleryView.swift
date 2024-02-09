@@ -14,6 +14,7 @@ protocol GaleryViewDelegate: AnyObject {
 class GaleryView: UIView {
     
     let photoCollectionView = PhotoCollectionView()
+    let side_offset: CGFloat = 5
     
     weak var delegate: GaleryViewDelegate!
     
@@ -34,8 +35,8 @@ class GaleryView: UIView {
         NSLayoutConstraint.activate([
             photoCollectionView.topAnchor.constraint(equalTo: self.topAnchor),
             photoCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            photoCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            photoCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            photoCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -side_offset),
+            photoCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: side_offset),
         ])
     }
     

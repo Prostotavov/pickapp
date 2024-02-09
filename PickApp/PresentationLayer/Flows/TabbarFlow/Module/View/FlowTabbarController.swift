@@ -49,8 +49,8 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
             NSLayoutConstraint.activate([
                 self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset + side_offset),
                 self.viewControllers![i].view!.bottomAnchor.constraint(equalTo: bottomTB.topAnchor),
-                self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -side_offset),
-                self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: side_offset),
+                self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             ])
         }
     }
