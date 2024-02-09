@@ -182,7 +182,7 @@
 		33C72C942B6E879E00D8DADD /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		33C72C992B6E8CE900D8DADD /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		33C72C9D2B6EE62600D8DADD /* APIRouterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouterStruct.swift; sourceTree = "<group>"; };
-		33C72CA82B6FA31200D8DADD /* PickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C72CA82B6FA31200D8DADD /* Pic App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72CA92B6FA31200D8DADD /* PickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72CAA2B6FA31200D8DADD /* PickAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C72CAB2B6FBD5A00D8DADD /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				33C72B712B6D546800D8DADD /* PickApp */,
-				33C72CA82B6FA31200D8DADD /* PickApp.app */,
+				33C72CA82B6FA31200D8DADD /* Pic App.app */,
 				33C72CA92B6FA31200D8DADD /* PickAppTests.xctest */,
 				33C72CAA2B6FA31200D8DADD /* PickAppUITests.xctest */,
 			);
@@ -822,7 +822,7 @@
 				33C72D062B73F63600D8DADD /* RealmSwift */,
 			);
 			productName = PickApp;
-			productReference = 33C72CA82B6FA31200D8DADD /* PickApp.app */;
+			productReference = 33C72CA82B6FA31200D8DADD /* Pic App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		33C72B842B6D546A00D8DADD /* PickAppTests */ = {
@@ -1201,6 +1201,7 @@
 				DEVELOPMENT_TEAM = BGTZ6TGNVV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PickApp/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PicApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1212,7 +1213,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.roma.pickapp.PickApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pic App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1229,6 +1230,7 @@
 				DEVELOPMENT_TEAM = BGTZ6TGNVV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PickApp/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PicApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
