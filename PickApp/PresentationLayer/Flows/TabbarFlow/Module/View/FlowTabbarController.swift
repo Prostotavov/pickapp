@@ -83,7 +83,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
         let height = tabBar.frame.height + 20
         let width = tabBar.frame.width
         let frame = CGRect(x: 0, y: 0, width: width, height: height)
-        let bottomTB = BottobTabbarView(frame: frame)
+        let bottomTB = BottomTabbarView(frame: frame)
         bottomTB.delegate = self
         view.addSubview(bottomTB)
         bottomTB.translatesAutoresizingMaskIntoConstraints = false
