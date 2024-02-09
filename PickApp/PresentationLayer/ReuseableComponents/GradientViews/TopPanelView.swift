@@ -35,6 +35,25 @@ class TopPanelView: UIView {
     private func commonInit() {
         layer.addSublayer(gradientLayer)
     }
+    
+    func setupTitle(_ text: String) {
+        let titleLabel = UILabel()
+        titleLabel.text = text
+        titleLabel.textAlignment = .center
+        
+        if let lobsterFont = UIFont(name: "Lobster-Regular", size: 27) {
+            titleLabel.font = lobsterFont
+        }
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(titleLabel)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+        ])
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()

@@ -68,6 +68,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
     
     private func setupTopPanel() {
         let gradientView = TopPanelView(frame: .zero)
+        gradientView.setupTitle("Galery App")
         self.view.addSubview(gradientView)
         
         gradientView.translatesAutoresizingMaskIntoConstraints = false
