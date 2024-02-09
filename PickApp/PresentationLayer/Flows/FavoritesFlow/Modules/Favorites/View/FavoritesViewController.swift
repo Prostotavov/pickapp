@@ -40,4 +40,8 @@ extension FavoritesViewController: FavoritesViewDelegate {
     func onImageCellTap(with id: String) {
         output.onImageCellTap(with: id)
     }
+    
+    func userDidScrollToEnd() {
+        output.userDidScrollToEnd()
+    }
 }

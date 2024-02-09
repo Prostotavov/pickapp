@@ -9,6 +9,7 @@ import UIKit
 
 protocol FavoritesViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
+    func userDidScrollToEnd()
 }
 
 class FavoritesView: UIView {
@@ -48,5 +49,9 @@ class FavoritesView: UIView {
 extension FavoritesView: PhotoCollectionViewDelegate {
     func onImageCellTap(with id: String) {
         delegate.onImageCellTap(with: id)
+    }
+    
+    func userDidScrollToEnd() {
+        delegate.userDidScrollToEnd()
     }
 }

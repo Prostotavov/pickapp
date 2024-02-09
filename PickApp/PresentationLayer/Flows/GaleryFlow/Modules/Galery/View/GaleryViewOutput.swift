@@ -11,4 +11,6 @@ import UIKit
 protocol GaleryViewOutput: AnyObject {
     
     func onImageCellTap(with id: String)
+    func userDidScrollToEnd()
+    func loadView()
 }

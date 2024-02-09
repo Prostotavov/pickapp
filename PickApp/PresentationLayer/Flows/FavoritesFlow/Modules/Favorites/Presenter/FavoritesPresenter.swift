@@ -31,4 +31,8 @@ class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, DBMana
         coordinator.onImageCell?(id)
     }
     
+    func userDidScrollToEnd() {
+        
+    }
+    
 }

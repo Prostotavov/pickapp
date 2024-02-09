@@ -9,6 +9,7 @@ import UIKit
 
 protocol GaleryViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
+    func userDidScrollToEnd()
 }
 
 class GaleryView: UIView {
@@ -48,5 +49,9 @@ class GaleryView: UIView {
 extension GaleryView: PhotoCollectionViewDelegate {
     func onImageCellTap(with id: String) {
         delegate.onImageCellTap(with: id)
+    }
+    
+    func userDidScrollToEnd() {
+        delegate.userDidScrollToEnd()
     }
 }

@@ -14,6 +14,8 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     weak var coordinator: GaleryViewCoordinatorOutput!
     var interactor: GaleryInteractorInput!
     
+//    let imageLoader = ImageLoader()
+    
     func onImageCellTap(with id: String) {
         coordinator.onImageCell?(id)
     }
@@ -22,5 +24,13 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
         DispatchQueue.main.async {
             self.view.reloadCollectionView(with: photos)
         }
+    }
+    
+    func userDidScrollToEnd() {
+        ImageLoader.shared.loadMorePhotos()
+    }
+    
+    func loadView() {
+        ImageLoader.shared.loadImages()
     }
 }

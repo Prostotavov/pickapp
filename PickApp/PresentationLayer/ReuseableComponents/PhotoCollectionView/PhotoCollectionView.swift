@@ -9,6 +9,7 @@ import UIKit
 
 protocol PhotoCollectionViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
+    func userDidScrollToEnd()
 }
 
 class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -18,6 +19,7 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     weak var delegate: PhotoCollectionViewDelegate!
     
     let cellOffset: CGFloat = 5
+    var hasReachedEnd = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,6 +86,27 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     func reloadData(with photos: [Photo]) {
         self.photos = photos
         collectionView?.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let screenHeight = scrollView.frame.size.height
+        let endThreshold: CGFloat = 100
+
+        if offsetY > contentHeight - screenHeight - endThreshold {
+            if !hasReachedEnd {
+                userDidScrollToEnd()
+                hasReachedEnd = true
+            }
+        } else {
+            hasReachedEnd = false
+        }
+        
+    }
+
+    func userDidScrollToEnd() {
+        delegate.userDidScrollToEnd()
     }
 }
 

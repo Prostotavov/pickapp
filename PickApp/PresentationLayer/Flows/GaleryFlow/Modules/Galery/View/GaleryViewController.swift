@@ -18,14 +18,14 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     var galeryView = GaleryView()
 
     override func loadView() {
+        assembler.assemblyModuleForViewInput(viewInput: self)
         galeryView.delegate = self
         view = galeryView
-        ImageLoader().loadImages()
+        output.loadView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assembler.assemblyModuleForViewInput(viewInput: self)
         view.backgroundColor = .white
     }
     
@@ -41,5 +41,9 @@ extension GaleryViewController: GaleryViewDelegate {
     
     func reloadCollectionView(with photos: [Photo]) {
         galeryView.reloadData(with: photos)
+    }
+    
+    func userDidScrollToEnd() {
+        output.userDidScrollToEnd()
     }
 }
