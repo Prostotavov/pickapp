@@ -39,9 +39,6 @@
 		33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */; };
 		33C72C372B6D639B00D8DADD /* FlowTabbarViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */; };
 		33C72C382B6D639B00D8DADD /* FlowTabbarViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */; };
-		33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */; };
-		33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */; };
-		33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */; };
 		33C72C3C2B6D639B00D8DADD /* GaleryCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */; };
 		33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */; };
 		33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */; };
@@ -153,9 +150,6 @@
 		33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarController.swift; sourceTree = "<group>"; };
 		33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewInput.swift; sourceTree = "<group>"; };
 		33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewOutput.swift; sourceTree = "<group>"; };
-		33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorOutput.swift; sourceTree = "<group>"; };
-		33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorInput.swift; sourceTree = "<group>"; };
-		33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractor.swift; sourceTree = "<group>"; };
 		33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinatorOutput.swift; sourceTree = "<group>"; };
 		33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinator.swift; sourceTree = "<group>"; };
 		33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryAssembly.swift; sourceTree = "<group>"; };
@@ -454,7 +448,6 @@
 				33C72BF32B6D639B00D8DADD /* Assembly */,
 				33C72BF62B6D639B00D8DADD /* Presenter */,
 				33C72BF82B6D639B00D8DADD /* View */,
-				33C72BFE2B6D639B00D8DADD /* Interactor */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -487,16 +480,6 @@
 				33C72D202B75FEA700D8DADD /* SubViews */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		33C72BFE2B6D639B00D8DADD /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */,
-				33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */,
-				33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		33C72C022B6D639B00D8DADD /* GaleryFlow */ = {
@@ -948,7 +931,6 @@
 				33C72C4B2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift in Sources */,
 				33C72C312B6D639B00D8DADD /* FlowTabbarAssembly.swift in Sources */,
 				33C72CEB2B724A1000D8DADD /* FullScreenImageInteractor.swift in Sources */,
-				33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */,
 				33C72C242B6D639B00D8DADD /* FavoritesCoordinator.swift in Sources */,
 				33C72CE52B724A1000D8DADD /* FullScreenImagePresenter.swift in Sources */,
 				33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */,
@@ -961,7 +943,6 @@
 				33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */,
 				33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */,
 				33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */,
-				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
 				33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */,
 				33C72D1F2B75839A00D8DADD /* GradientTabbarButton.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
@@ -1025,7 +1006,6 @@
 				33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */,
 				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
 				33C72D222B75FF0600D8DADD /* BottomTabbarView.swift in Sources */,
-				33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */,
 				33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */,
 				33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */,
 			);

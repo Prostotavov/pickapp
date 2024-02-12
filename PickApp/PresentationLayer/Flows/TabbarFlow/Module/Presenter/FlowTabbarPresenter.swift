@@ -7,9 +7,8 @@
 
 import Foundation
 
-class FlowTabbarPresenter: FlowTabbarViewOutput, FlowTabbarInteractorOutput {
+class FlowTabbarPresenter: FlowTabbarViewOutput {
 
     weak var view: FlowTabbarViewInput!
     weak var coordinator: FlowTabbarCoordinatorOutput!
-    var interactor: FlowTabbarInteractorInput!
 }
