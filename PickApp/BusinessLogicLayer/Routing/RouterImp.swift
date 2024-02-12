@@ -21,12 +21,12 @@ class RouterImp: Router {
         return rootController
     }
     
-    func present(_ module: Presentable?) {
+    func present(_ module: UIViewController?) {
         present(module, animated: true)
     }
     
-    func present(_ module: Presentable?, animated: Bool) {
-        guard let controller = module?.toPresent() else { return }
+    func present(_ module: UIViewController?, animated: Bool) {
+        guard let controller = module else { return }
         rootController?.present(controller, animated: animated, completion: nil)
     }
     
@@ -38,17 +38,17 @@ class RouterImp: Router {
         rootController?.dismiss(animated: animated, completion: completion)
     }
     
-    func push(_ module: Presentable?) {
+    func push(_ module: UIViewController?) {
         push(module, animated: true)
     }
     
-    func push(_ module: Presentable?, animated: Bool) {
+    func push(_ module: UIViewController?, animated: Bool) {
         push(module, animated: animated, completion: nil)
     }
     
-    func push(_ module: Presentable?, animated: Bool, completion: (() -> Void)?) {
+    func push(_ module: UIViewController?, animated: Bool, completion: (() -> Void)?) {
         guard
-            let controller = module?.toPresent(),
+            let controller = module,
             (controller is UINavigationController == false)
             else { assertionFailure("Deprecated push UINavigationController."); return }
         
@@ -68,12 +68,12 @@ class RouterImp: Router {
         }
     }
     
-    func setRootModule(_ module: Presentable?) {
+    func setRootModule(_ module: UIViewController?) {
         setRootModule(module, hideBar: false)
     }
     
-    func setRootModule(_ module: Presentable?, hideBar: Bool) {
-        guard let controller = module?.toPresent() else { return }
+    func setRootModule(_ module: UIViewController?, hideBar: Bool) {
+        guard let controller = module else { return }
         rootController?.setViewControllers([controller], animated: false)
         rootController?.isNavigationBarHidden = hideBar
     }

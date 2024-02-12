@@ -14,8 +14,6 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     weak var coordinator: GaleryViewCoordinatorOutput!
     var interactor: GaleryInteractorInput!
     
-//    let imageLoader = ImageLoader()
-    
     func onImageCellTap(with id: String) {
         coordinator.onImageCell?(id)
     }
