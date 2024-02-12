@@ -40,7 +40,6 @@ class ImageLoader {
         .done { photos in
             TempImageStorage.shared.addPhotos(photosResponse: photos, images: [])
             self.photosResponse = photos
-            self.getAndStoreImages()
         }
         .catch { error in
             print("error in getPhotos: \(error)")
@@ -50,20 +49,6 @@ class ImageLoader {
     func loadMorePhotos() {
         currentPage += 1
         loadImages(page: currentPage)
-    }
-    
-    private func getAndStoreImages() {
-        for photo in photosResponse {
-            guard let imageURL = URL(string: photo.urls!.small) else {
-                return
-            }
-            DispatchQueue.global().async {
-                guard let imageData = try? Data(contentsOf: imageURL) else {
-                    return
-                }
-                TempImageStorage.shared.addPhoto(photoResponse: photo, image: UIImage(data: imageData))
-            }
-        }
     }
     
 }

@@ -58,6 +58,18 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else {
             return UICollectionViewCell()
         }
+        guard let imageURL = URL(string: photos[indexPath.row].url) else {
+            return cell
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else {
+                return
+            }
+            let cellImage = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                cell.imageView.image = cellImage
+            }
+        }
         cell.imageView.image = photos[indexPath.item].image
         return cell
     }
