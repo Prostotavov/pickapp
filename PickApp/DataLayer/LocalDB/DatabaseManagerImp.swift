@@ -1,5 +1,5 @@
 //
-//  DBManager.swift
+//  DatabaseManagerImp.swift
 //  PickApp
 //
 //  Created by Roma on 7.02.24.
@@ -8,15 +8,26 @@
 import Foundation
 import RealmSwift
 
-protocol DBManagerOutput: AnyObject {
+protocol DatabaseManagerOutput: AnyObject {
     func newPhotosLiked()
 }
 
-class DBManager {
+protocol DatabaseManager {
+    func createPhotoCollection(name: DBCollecionNames, photos: List<DBPhoto>)
+    func savePhotoCollection(_ photoCollection: DBPhotoCollection)
+    func deletePhotoCollection(_ photoCollection: DBPhotoCollection)
+    func getPhotoCollections() -> Results<DBPhotoCollection>
+    func addPhoto(_ photo: DBPhoto, toCollectionWithName collectionName: DBCollecionNames)
+    func deletePhoto(withId photoId: String, fromCollectionWithName collectionName: DBCollecionNames)
+    func getPhotos(fromCollectionWithName collectionName: DBCollecionNames) -> [Photo]
+    func isExistPhoto(withId photoId: String, inCollectionWithName collectionName: DBCollecionNames) -> Bool
+    func isExist(collectionWithName collectionName: DBCollecionNames) -> Bool
+    func deleteAllData()
+}
+
+class DatabaseManagerImp: DatabaseManager {
     
-    static let shared = DBManager()
-    
-    weak var output: DBManagerOutput!
+    weak var output: DatabaseManagerOutput!
     
     private var realm: Realm {
         do {

@@ -10,10 +10,11 @@ import Foundation
 class FullScreenImageInteractor: FullScreenImageInteractorInput {
     
     weak var output: FullScreenImageInteractorOutput!
+    var databaseManager: DatabaseManager!
     
     func likePhoto(with id: String) {
-        if DBManager.shared.isExistPhoto(withId: id, inCollectionWithName: .favorites) {
-            DBManager.shared.deletePhoto(withId: id, fromCollectionWithName: .favorites)
+        if databaseManager.isExistPhoto(withId: id, inCollectionWithName: .favorites) {
+            databaseManager.deletePhoto(withId: id, fromCollectionWithName: .favorites)
         } else {
             guard let photo = TempImageStorage.shared.getPhoto(with: id) else {
                 return
@@ -26,7 +27,7 @@ class FullScreenImageInteractor: FullScreenImageInteractorInput {
             dbPhoto.altDescription = photo.altDescription ?? ""
             dbPhoto.width = photo.width ?? 0
             dbPhoto.height = photo.height ?? 0
-            DBManager.shared.addPhoto(dbPhoto, toCollectionWithName: .favorites)
+            databaseManager.addPhoto(dbPhoto, toCollectionWithName: .favorites)
         }
     }
 }

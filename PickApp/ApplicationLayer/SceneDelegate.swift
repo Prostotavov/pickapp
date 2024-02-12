@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupReamlCollections() {
-        DBManager.shared.createPhotoCollection(name: .favorites)
+        DatabaseManagerImp().createPhotoCollection(name: .favorites)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -83,7 +83,7 @@
 		33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF92B72745800D8DADD /* GaleryView.swift */; };
 		33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFC2B7287F300D8DADD /* FavoritesView.swift */; };
 		33C72CFF2B72D6A100D8DADD /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */; };
-		33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D022B73F5D400D8DADD /* DBManager.swift */; };
+		33C72D032B73F5D400D8DADD /* DatabaseManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */; };
 		33C72D052B73F63600D8DADD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72D042B73F63600D8DADD /* Realm */; };
 		33C72D072B73F63600D8DADD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72D062B73F63600D8DADD /* RealmSwift */; };
 		33C72D092B73F68D00D8DADD /* DBPhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */; };
@@ -194,7 +194,7 @@
 		33C72CF92B72745800D8DADD /* GaleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryView.swift; sourceTree = "<group>"; };
 		33C72CFC2B7287F300D8DADD /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		33C72D022B73F5D400D8DADD /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerImp.swift; sourceTree = "<group>"; };
 		33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhotoCollection.swift; sourceTree = "<group>"; };
 		33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoto.swift; sourceTree = "<group>"; };
 		33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCollecionNames.swift; sourceTree = "<group>"; };
@@ -745,7 +745,7 @@
 		33C72D0F2B75269F00D8DADD /* LocalDB */ = {
 			isa = PBXGroup;
 			children = (
-				33C72D022B73F5D400D8DADD /* DBManager.swift */,
+				33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */,
 				33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */,
 				33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */,
 				33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */,
@@ -1003,7 +1003,7 @@
 				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
 				33C72D222B75FF0600D8DADD /* BottomTabbarView.swift in Sources */,
 				33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */,
-				33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */,
+				33C72D032B73F5D400D8DADD /* DatabaseManagerImp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
