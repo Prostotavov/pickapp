@@ -11,10 +11,6 @@ import Alamofire
 
 class ImageLoader {
     
-    let appID = "562730"
-    let accessKey = "TrARTBODRW3UIkwQt8OuyeujG21qDrH3IUbUfAYWt2k"
-    let secretKey = "DwXJppWhVtElskHv4NzHUGr5rtBEcW6nNrKbKfV-VvA"
-    
     var apiKeys: APIKeys!
     
     private var photosResponse: [PhotoResponse] = []
@@ -27,6 +23,11 @@ class ImageLoader {
     static let shared = ImageLoader()
     
     init() {
+        guard let appID = ProcessInfo.processInfo.environment["APP_ID"],
+              let accessKey = ProcessInfo.processInfo.environment["ACCESS_KEY"],
+              let secretKey = ProcessInfo.processInfo.environment["SECRET_KEY"] else {
+            fatalError("Couldn't get keys from environment variables")
+        }
         self.apiKeys = APIKeys(appID: appID, accessKey: accessKey, secretKey: secretKey)
     }
     
