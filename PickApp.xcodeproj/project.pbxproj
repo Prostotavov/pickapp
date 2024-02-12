@@ -12,7 +12,6 @@
 		33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7B2B6D546A00D8DADD /* Assets.xcassets */; };
 		33C72B7F2B6D546A00D8DADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */; };
 		33C72BC72B6D621B00D8DADD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC42B6D621B00D8DADD /* Coordinator.swift */; };
-		33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC52B6D621B00D8DADD /* Presentable.swift */; };
 		33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */; };
 		33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */; };
 		33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */; };
@@ -123,7 +122,6 @@
 		33C72B7E2B6D546A00D8DADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C72B802B6D546A00D8DADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C72BC42B6D621B00D8DADD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		33C72BC52B6D621B00D8DADD /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 				33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */,
 				33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */,
 				33C72BC42B6D621B00D8DADD /* Coordinator.swift */,
-				33C72BC52B6D621B00D8DADD /* Presentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1002,7 +999,6 @@
 				33C72C432B6D639B00D8DADD /* GaleryViewController.swift in Sources */,
 				33C72C422B6D639B00D8DADD /* GaleryViewOutput.swift in Sources */,
 				33C72C492B6D639B00D8DADD /* FavoritesFlowFactory.swift in Sources */,
-				33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */,
 				33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */,
 				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
 				33C72D222B75FF0600D8DADD /* BottomTabbarView.swift in Sources */,
