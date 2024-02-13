@@ -9,6 +9,6 @@ import Foundation
 
 protocol FavoritesViewOutput: AnyObject {
     func loadView()
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
 }

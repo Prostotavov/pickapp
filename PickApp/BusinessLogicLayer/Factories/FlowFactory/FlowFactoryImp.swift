@@ -20,15 +20,8 @@ extension FlowFactoryImp: GaleryFlowFactory {
         return GaleryViewController()
     }
     
-    func produceFullScreenImageOutput(with id: String) -> FullScreenImageViewCoordinatorOutput? {
-        if let photo = TempImageStorage.shared.getPhoto(with: id) {
-            return FullScreenImageViewController(photo: photo)
-        }
-        if let dbPhoto = DatabaseManagerImp().getPhoto(withId: id, fromCollectionWithName: .favorites) {
-            let photo = Photo(dbPhoto: dbPhoto)
-            return FullScreenImageViewController(photo: photo)
-        }
-        return nil
+    func produceFullScreenImageOutput(with content: Photo) -> FullScreenImageViewCoordinatorOutput? {
+        return FullScreenImageViewController(photo: content)
     }
 }
 

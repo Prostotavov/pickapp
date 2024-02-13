@@ -13,7 +13,7 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
         
     var output: GaleryViewOutput!
     var assembler: GaleryAssemblyProtocol = GaleryAssembly()
-    var onImageCell: ((String) -> Void)?
+    var onImageCell: ((Photo) -> Void)?
     
     var galeryView = GaleryView()
 
@@ -48,8 +48,8 @@ extension GaleryViewController: GaleryViewDelegate {
         output.loadImage(at: indexPath, from: url)
     }
     
-    func onImageCellTap(with id: String) {
-        output.onImageCellTap(with: id)
+    func onImageCellTap(with content: Photo) {
+        output.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

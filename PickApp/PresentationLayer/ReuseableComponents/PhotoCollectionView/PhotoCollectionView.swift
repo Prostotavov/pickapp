@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PhotoCollectionViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
     func loadImage(at indexPath: IndexPath, from url: URL)
 }
@@ -72,7 +72,12 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate.onImageCellTap(with: photos[indexPath.item].id)
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCollectionViewCell else {
+            return
+        }
+        var photo = photos[indexPath.item]
+        photo.image = cell.imageView.image
+        delegate.onImageCellTap(with: photo)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

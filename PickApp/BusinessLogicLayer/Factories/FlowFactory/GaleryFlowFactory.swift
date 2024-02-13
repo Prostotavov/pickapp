@@ -10,5 +10,5 @@ import Foundation
 protocol GaleryFlowFactory {
     
     func produceGaleryOutput() -> GaleryViewCoordinatorOutput
-    func produceFullScreenImageOutput(with id: String) -> FullScreenImageViewCoordinatorOutput?
+    func produceFullScreenImageOutput(with content: Photo) -> FullScreenImageViewCoordinatorOutput?
 }

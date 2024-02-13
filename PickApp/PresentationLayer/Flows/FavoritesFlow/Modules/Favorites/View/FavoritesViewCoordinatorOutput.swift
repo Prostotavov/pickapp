@@ -8,5 +8,5 @@
 import UIKit
 
 protocol FavoritesViewCoordinatorOutput: UIViewController {
-    var onImageCell: ((_ id: String) -> Void)? { get set }
+    var onImageCell: ((_ content: Photo) -> Void)? { get set }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FavoritesViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
 }
 
@@ -51,8 +51,8 @@ extension FavoritesView: PhotoCollectionViewDelegate {
     func loadImage(at indexPath: IndexPath, from url: URL) {
     }
     
-    func onImageCellTap(with id: String) {
-        delegate.onImageCellTap(with: id)
+    func onImageCellTap(with content: Photo) {
+        delegate.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

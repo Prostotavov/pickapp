@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GaleryViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
     func loadImage(at indexPath: IndexPath, from url: URL)
 }
@@ -57,8 +57,8 @@ extension GaleryView: PhotoCollectionViewDelegate {
         delegate.loadImage(at: indexPath, from: url)
     }
     
-    func onImageCellTap(with id: String) {
-        delegate.onImageCellTap(with: id)
+    func onImageCellTap(with content: Photo) {
+        delegate.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

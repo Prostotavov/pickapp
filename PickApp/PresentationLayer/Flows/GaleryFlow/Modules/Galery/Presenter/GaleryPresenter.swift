@@ -14,8 +14,8 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     weak var coordinator: GaleryViewCoordinatorOutput!
     var interactor: GaleryInteractorInput!
     
-    func onImageCellTap(with id: String) {
-        coordinator.onImageCell?(id)
+    func onImageCellTap(with content: Photo) {
+        coordinator.onImageCell?(content)
     }
     
     func newPhotosAdded(_ photos: [Photo]) {

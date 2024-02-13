@@ -30,8 +30,8 @@ class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, Databa
         }
     }
     
-    func onImageCellTap(with id: String) {
-        coordinator.onImageCell?(id)
+    func onImageCellTap(with content: Photo) {
+        coordinator.onImageCell?(content)
     }
     
     func userDidScrollToEnd() {
