@@ -38,10 +38,10 @@ class FavoritesCoordinator: BaseCoordinator, FavoritesCoordinatorOutput {
         let fullScreenImageOutput = factory.produceFullScreenImageOutput(with: content)
         
         fullScreenImageOutput?.onBack = { [weak self] in
-            self?.router.dismissModule(animated: true, completion: nil)
+            self?.router.popModule(animated: true)
         }
         
-        router.present(fullScreenImageOutput, animated: true)
+        router.push(fullScreenImageOutput, animated: true)
     }
     
 }

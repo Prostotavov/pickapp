@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334636DD2B7B1FB2004CE595 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */; };
 		33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B722B6D546800D8DADD /* AppDelegate.swift */; };
 		33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B742B6D546800D8DADD /* SceneDelegate.swift */; };
 		33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7B2B6D546A00D8DADD /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		33C72B722B6D546800D8DADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C72B742B6D546800D8DADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		33C72B7B2B6D546A00D8DADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334636DE2B7B1FB4004CE595 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		33C72B662B6D546800D8DADD = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +687,7 @@
 				33C72CDC2B724A1000D8DADD /* FullScreenImageViewController.swift */,
 				33C72CDD2B724A1000D8DADD /* FullScreenImageViewOutput.swift */,
 				33C72CDE2B724A1000D8DADD /* FullScreenImageViewInput.swift */,
+				334636DE2B7B1FB4004CE595 /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -972,6 +983,7 @@
 				33C72CE32B724A1000D8DADD /* FullScreenImageAssemblyProtocol.swift in Sources */,
 				33C72C462B6D639B00D8DADD /* GaleryInteractorInput.swift in Sources */,
 				33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */,
+				334636DD2B7B1FB2004CE595 /* FullScreenImageView.swift in Sources */,
 				33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */,
 				33C72C442B6D639B00D8DADD /* GaleryViewInput.swift in Sources */,
 				33C72CE72B724A1000D8DADD /* FullScreenImageViewController.swift in Sources */,
