@@ -26,7 +26,7 @@ class CoordinatorFactoryImp: CoordinatorFactory {
         }
     }
     
-    func produceTabbarCoordinator(coordinatorFactory: CoordinatorFactory) -> (configurator: Coordinator & TabbarCoordinatorOutput, toPresent: Presentable?) {
+    func produceTabbarCoordinator(coordinatorFactory: CoordinatorFactory) -> (configurator: Coordinator & TabbarCoordinatorOutput, toPresent: UIViewController?) {
         
         let controller = FlowTabbarController()
         let coordinator = TabbarCoordinator(tabbarOutput: controller, coordinatorFactory: coordinatorFactory)

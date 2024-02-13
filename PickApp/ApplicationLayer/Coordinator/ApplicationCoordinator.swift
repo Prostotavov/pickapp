@@ -27,18 +27,6 @@ final class ApplicationCoordinator: BaseCoordinator {
         runTabbarFlow()
     }
     
-    private func runGaleryFlow() {
-
-        let coordinator = coordinatorFactory.produceGaleryCoordinator(router: router, flowFactory: flowFactory)
-
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.removeDependency(coordinator)
-        }
-
-        addDependency(coordinator)
-        coordinator.start()
-    }
-    
     private func runTabbarFlow() {
         
          let (coordinator, module) = coordinatorFactory.produceTabbarCoordinator(coordinatorFactory: coordinatorFactory)

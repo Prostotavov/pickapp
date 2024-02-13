@@ -18,13 +18,9 @@ class FlowTabbarAssembly: FlowTabbarAssemblyProtocol {
     private func assembly(viewController: FlowTabbarController) {
 
         let presenter = FlowTabbarPresenter()
-        let interactor = FlowTabbarInteractor()
         
         presenter.view = viewController
         presenter.coordinator = viewController
-        presenter.interactor = interactor
-
-        interactor.output = presenter
         
         viewController.output = presenter
         

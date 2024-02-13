@@ -1,5 +1,5 @@
 //
-//  TempImageStorage.swift
+//  RuntimeImageStorage.swift
 //  PickApp
 //
 //  Created by Roma on 6.02.24.
@@ -8,23 +8,29 @@
 import Foundation
 import UIKit
 
-protocol StorageOutput: AnyObject {
+protocol RuntimeStorageOutput: AnyObject {
     func newPhotosAdded(_ photos: [Photo])
 }
 
-struct TempImageStorage {
+protocol RuntimeStorage: AnyObject {
+    func addPhotos(photosResponse: [PhotoResponse], images: [UIImage?])
+    func addPhoto(photoResponse: PhotoResponse, image: UIImage?)
+    func getPhoto(with id: String) -> Photo?
+}
+
+class RuntimeStorageImp: RuntimeStorage {
     
-    static var shared = TempImageStorage()
+    static var shared = RuntimeStorageImp()
     
     private var photos: [Photo]
     
-    weak var output: StorageOutput!
+    weak var output: RuntimeStorageOutput!
     
     init() {
         photos = []
     }
     
-    mutating func addPhotos(photosResponse: [PhotoResponse], images: [UIImage?]) {
+    func addPhotos(photosResponse: [PhotoResponse], images: [UIImage?]) {
         for i in 0...photosResponse.count {
             if photosResponse.indices.contains(i) && images.indices.contains(i) {
                 if photos.contains(where: {$0.id == photosResponse[i].id}) {
@@ -46,7 +52,7 @@ struct TempImageStorage {
         output.newPhotosAdded(photos)
     }
     
-    mutating func addPhoto(photoResponse: PhotoResponse, image: UIImage?) {
+    func addPhoto(photoResponse: PhotoResponse, image: UIImage?) {
         if photos.contains(where: {$0.id == photoResponse.id}) {
             for (index, photo) in photos.enumerated() {
                 if photo.id == photoResponse.id {

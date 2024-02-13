@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FavoritesViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
 }
 
@@ -34,7 +34,7 @@ class FavoritesView: UIView {
         self.addSubview(photoCollectionView)
         photoCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            photoCollectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            photoCollectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: side_offset),
             photoCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             photoCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -side_offset),
             photoCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: side_offset),
@@ -47,8 +47,12 @@ class FavoritesView: UIView {
 }
 
 extension FavoritesView: PhotoCollectionViewDelegate {
-    func onImageCellTap(with id: String) {
-        delegate.onImageCellTap(with: id)
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+    }
+    
+    func onImageCellTap(with content: Photo) {
+        delegate.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

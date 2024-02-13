@@ -5,8 +5,8 @@
 //  Created by Roma on 6.02.24.
 //
 
-import Foundation
+import UIKit
 
-protocol FullScreenImageViewCoordinatorOutput: Presentable {
+protocol FullScreenImageViewCoordinatorOutput: UIViewController {
     var onBack: (() -> Void)? { get set }
 }

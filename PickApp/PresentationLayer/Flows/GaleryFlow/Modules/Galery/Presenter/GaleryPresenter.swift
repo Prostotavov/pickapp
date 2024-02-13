@@ -8,16 +8,15 @@
 import Foundation
 import UIKit
 
-class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
+class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, RuntimeStorageOutput {
     
     weak var view: GaleryViewInput!
     weak var coordinator: GaleryViewCoordinatorOutput!
     var interactor: GaleryInteractorInput!
+    var ImageLoader: ImageLoader!
     
-//    let imageLoader = ImageLoader()
-    
-    func onImageCellTap(with id: String) {
-        coordinator.onImageCell?(id)
+    func onImageCellTap(with content: Photo) {
+        coordinator.onImageCell?(content)
     }
     
     func newPhotosAdded(_ photos: [Photo]) {
@@ -27,10 +26,20 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     }
     
     func userDidScrollToEnd() {
-        ImageLoader.shared.loadMorePhotos()
+        ImageLoader.loadMorePhotos()
     }
     
     func loadView() {
-        ImageLoader.shared.loadImages()
+        ImageLoader.loadImages(page: 1, per_page: 28)
     }
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+        interactor.loadImage(from: url, completionHandler: { [weak self] imageData in
+            DispatchQueue.main.async {
+                let image = UIImage(data: imageData ?? Data())
+                self?.view?.updateImage(at: indexPath, with: image)
+            }
+        })
+    }
+    
 }

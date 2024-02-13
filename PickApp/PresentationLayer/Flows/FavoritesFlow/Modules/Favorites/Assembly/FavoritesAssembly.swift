@@ -19,15 +19,18 @@ class FavoritesAssembly: FavoritesAssemblyProtocol {
         
         let presenter = FavoritesPresenter()
         let interactor = FavoritesInteractor()
+        let databaseManager = DatabaseManagerImp.shared
         
         presenter.view = viewController
         presenter.coordinator = viewController
         presenter.interactor = interactor
+        presenter.databaseManager = databaseManager
 
         interactor.output = presenter
         
         viewController.output = presenter
-        DBManager.shared.output = presenter
+        databaseManager.output = presenter
+        
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  DBManager.swift
+//  DatabaseManagerImp.swift
 //  PickApp
 //
 //  Created by Roma on 7.02.24.
@@ -8,15 +8,29 @@
 import Foundation
 import RealmSwift
 
-protocol DBManagerOutput: AnyObject {
+protocol DatabaseManagerOutput: AnyObject {
     func newPhotosLiked()
 }
 
-class DBManager {
+protocol DatabaseManager {
+    func createPhotoCollection(name: DBCollecionNames, photos: List<DBPhoto>)
+    func savePhotoCollection(_ photoCollection: DBPhotoCollection)
+    func deletePhotoCollection(_ photoCollection: DBPhotoCollection)
+    func getPhotoCollections() -> Results<DBPhotoCollection>
+    func getPhoto(withId photoId: String, fromCollectionWithName collectionName: DBCollecionNames) -> DBPhoto?
+    func addPhoto(_ photo: DBPhoto, toCollectionWithName collectionName: DBCollecionNames)
+    func deletePhoto(withId photoId: String, fromCollectionWithName collectionName: DBCollecionNames)
+    func getPhotos(fromCollectionWithName collectionName: DBCollecionNames) -> [Photo]
+    func isExistPhoto(withId photoId: String, inCollectionWithName collectionName: DBCollecionNames) -> Bool
+    func isExist(collectionWithName collectionName: DBCollecionNames) -> Bool
+    func deleteAllData()
+}
+
+class DatabaseManagerImp: DatabaseManager {
     
-    static let shared = DBManager()
+    weak var output: DatabaseManagerOutput!
     
-    weak var output: DBManagerOutput!
+    static let shared = DatabaseManagerImp()
     
     private var realm: Realm {
         do {
@@ -104,6 +118,18 @@ class DBManager {
             print("Error deleting photo from collection: \(error)")
         }
     }
+    
+    func getPhoto(withId photoId: String, fromCollectionWithName collectionName: DBCollecionNames) -> DBPhoto? {
+        guard let photoCollection = realm.objects(DBPhotoCollection.self)
+                                          .filter("name == %@", collectionName.rawValue)
+                                          .first,
+              let foundPhoto = photoCollection.photos.first(where: { $0.id == photoId }) else {
+            print("Photo with id \(photoId) not found in collection \(collectionName.rawValue)")
+            return nil
+        }
+        return foundPhoto
+    }
+
     
     func getPhotos(fromCollectionWithName collectionName: DBCollecionNames) -> [Photo] {
         var photos: [Photo] = []

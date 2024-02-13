@@ -5,8 +5,9 @@
 //  Created by MacBook Pro on 16.03.22.
 //
 
-import Foundation
+import UIKit
 
 protocol GaleryViewInput: AnyObject {
     func reloadCollectionView(with photos: [Photo])
+    func updateImage(at indexPath: IndexPath, with image: UIImage?)
 }

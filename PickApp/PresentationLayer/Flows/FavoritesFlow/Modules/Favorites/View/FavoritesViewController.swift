@@ -13,7 +13,7 @@ class FavoritesViewController: UIViewController, FavoritesViewInput, FavoritesVi
     var assembler: FavoritesAssemblyProtocol = FavoritesAssembly()
     var favoritesView = FavoritesView()
     
-    var onImageCell: ((String) -> Void)?
+    var onImageCell: ((Photo) -> Void)?
     
     override func loadView() {
         favoritesView.delegate = self
@@ -37,8 +37,8 @@ class FavoritesViewController: UIViewController, FavoritesViewInput, FavoritesVi
 }
 
 extension FavoritesViewController: FavoritesViewDelegate {
-    func onImageCellTap(with id: String) {
-        output.onImageCellTap(with: id)
+    func onImageCellTap(with content: Photo) {
+        output.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

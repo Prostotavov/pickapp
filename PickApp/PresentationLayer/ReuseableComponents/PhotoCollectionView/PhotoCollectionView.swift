@@ -8,8 +8,9 @@
 import UIKit
 
 protocol PhotoCollectionViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
+    func loadImage(at indexPath: IndexPath, from url: URL)
 }
 
 class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -58,6 +59,10 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else {
             return UICollectionViewCell()
         }
+        guard let imageURL = URL(string: photos[indexPath.row].url) else {
+            return cell
+        }
+        delegate?.loadImage(at: indexPath, from: imageURL)
         cell.imageView.image = photos[indexPath.item].image
         return cell
     }
@@ -67,7 +72,12 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate.onImageCellTap(with: photos[indexPath.item].id)
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCollectionViewCell else {
+            return
+        }
+        var photo = photos[indexPath.item]
+        photo.image = cell.imageView.image
+        delegate.onImageCellTap(with: photo)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -86,6 +96,13 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     func reloadData(with photos: [Photo]) {
         self.photos = photos
         collectionView?.reloadData()
+    }
+    
+    func updateImage(at indexPath: IndexPath, with image: UIImage?) {
+        guard let cell = collectionView?.cellForItem(at: indexPath) as? PhotoCollectionViewCell else {
+            return
+        }
+        cell.imageView.image = image
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

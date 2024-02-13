@@ -33,21 +33,21 @@ class GaleryCoordinator: BaseCoordinator, GaleryCoordinatorOutput {
     private func showGalery() {
         let galeryOutput = factory.produceGaleryOutput()
         
-        galeryOutput.onImageCell = { [weak self] (id) in
-            self?.showFullScreenImage(with: id)
+        galeryOutput.onImageCell = { [weak self] (content) in
+            self?.showFullScreenImage(with: content)
         }
         
         router.setRootModule(galeryOutput, hideBar: true)
     }
     
-    private func showFullScreenImage(with id: String) {
-        let fullScreenImageOutput = factory.produceFullScreenImageOutput(with: id)
+    private func showFullScreenImage(with content: Photo) {
+        let fullScreenImageOutput = factory.produceFullScreenImageOutput(with: content)
         
         fullScreenImageOutput?.onBack = { [weak self] in
-            self?.router.dismissModule(animated: true, completion: nil)
+            self?.router.popModule(animated: true)
         }
         
-        router.present(fullScreenImageOutput, animated: true)
+        router.push(fullScreenImageOutput, animated: true)
     }
 
 }

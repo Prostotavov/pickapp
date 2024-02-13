@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334636DD2B7B1FB2004CE595 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */; };
 		33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B722B6D546800D8DADD /* AppDelegate.swift */; };
 		33C72B752B6D546800D8DADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72B742B6D546800D8DADD /* SceneDelegate.swift */; };
 		33C72B7C2B6D546A00D8DADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7B2B6D546A00D8DADD /* Assets.xcassets */; };
 		33C72B7F2B6D546A00D8DADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C72B7D2B6D546A00D8DADD /* LaunchScreen.storyboard */; };
 		33C72BC72B6D621B00D8DADD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC42B6D621B00D8DADD /* Coordinator.swift */; };
-		33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC52B6D621B00D8DADD /* Presentable.swift */; };
 		33C72BC92B6D621B00D8DADD /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */; };
 		33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */; };
 		33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */; };
@@ -39,9 +39,6 @@
 		33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */; };
 		33C72C372B6D639B00D8DADD /* FlowTabbarViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */; };
 		33C72C382B6D639B00D8DADD /* FlowTabbarViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */; };
-		33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */; };
-		33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */; };
-		33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */; };
 		33C72C3C2B6D639B00D8DADD /* GaleryCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */; };
 		33C72C3D2B6D639B00D8DADD /* GaleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */; };
 		33C72C3E2B6D639B00D8DADD /* GaleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */; };
@@ -81,13 +78,13 @@
 		33C72CEA2B724A1000D8DADD /* FullScreenImageInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */; };
 		33C72CEB2B724A1000D8DADD /* FullScreenImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */; };
 		33C72CEC2B724A1000D8DADD /* FullScreenImageInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */; };
-		33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* TempImageStorage.swift */; };
+		33C72CF12B725D3200D8DADD /* RuntimeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */; };
 		33C72CF32B725F0300D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF22B725F0300D8DADD /* Photo.swift */; };
 		33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */; };
 		33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF92B72745800D8DADD /* GaleryView.swift */; };
 		33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFC2B7287F300D8DADD /* FavoritesView.swift */; };
 		33C72CFF2B72D6A100D8DADD /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */; };
-		33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D022B73F5D400D8DADD /* DBManager.swift */; };
+		33C72D032B73F5D400D8DADD /* DatabaseManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */; };
 		33C72D052B73F63600D8DADD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72D042B73F63600D8DADD /* Realm */; };
 		33C72D072B73F63600D8DADD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33C72D062B73F63600D8DADD /* RealmSwift */; };
 		33C72D092B73F68D00D8DADD /* DBPhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */; };
@@ -120,13 +117,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		33C72B722B6D546800D8DADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33C72B742B6D546800D8DADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		33C72B7B2B6D546A00D8DADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33C72B7E2B6D546A00D8DADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33C72B802B6D546A00D8DADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C72BC42B6D621B00D8DADD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		33C72BC52B6D621B00D8DADD /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		33C72BCB2B6D622700D8DADD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
@@ -153,9 +150,6 @@
 		33C72BFB2B6D639B00D8DADD /* FlowTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarController.swift; sourceTree = "<group>"; };
 		33C72BFC2B6D639B00D8DADD /* FlowTabbarViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewInput.swift; sourceTree = "<group>"; };
 		33C72BFD2B6D639B00D8DADD /* FlowTabbarViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarViewOutput.swift; sourceTree = "<group>"; };
-		33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorOutput.swift; sourceTree = "<group>"; };
-		33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractorInput.swift; sourceTree = "<group>"; };
-		33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowTabbarInteractor.swift; sourceTree = "<group>"; };
 		33C72C042B6D639B00D8DADD /* GaleryCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinatorOutput.swift; sourceTree = "<group>"; };
 		33C72C052B6D639B00D8DADD /* GaleryCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryCoordinator.swift; sourceTree = "<group>"; };
 		33C72C092B6D639B00D8DADD /* GaleryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaleryAssembly.swift; sourceTree = "<group>"; };
@@ -196,13 +190,13 @@
 		33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorInput.swift; sourceTree = "<group>"; };
 		33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractor.swift; sourceTree = "<group>"; };
 		33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorOutput.swift; sourceTree = "<group>"; };
-		33C72CF02B725D3200D8DADD /* TempImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempImageStorage.swift; sourceTree = "<group>"; };
+		33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeStorage.swift; sourceTree = "<group>"; };
 		33C72CF22B725F0300D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		33C72CF92B72745800D8DADD /* GaleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryView.swift; sourceTree = "<group>"; };
 		33C72CFC2B7287F300D8DADD /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		33C72D022B73F5D400D8DADD /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerImp.swift; sourceTree = "<group>"; };
 		33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhotoCollection.swift; sourceTree = "<group>"; };
 		33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPhoto.swift; sourceTree = "<group>"; };
 		33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCollecionNames.swift; sourceTree = "<group>"; };
@@ -244,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334636DE2B7B1FB4004CE595 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				334636DC2B7B1FB2004CE595 /* FullScreenImageView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		33C72B662B6D546800D8DADD = {
 			isa = PBXGroup;
 			children = (
@@ -286,7 +288,6 @@
 				33C72BD32B6D633800D8DADD /* DeepLinkOption.swift */,
 				33C72BC62B6D621B00D8DADD /* BaseCoordinator.swift */,
 				33C72BC42B6D621B00D8DADD /* Coordinator.swift */,
-				33C72BC52B6D621B00D8DADD /* Presentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -454,7 +455,6 @@
 				33C72BF32B6D639B00D8DADD /* Assembly */,
 				33C72BF62B6D639B00D8DADD /* Presenter */,
 				33C72BF82B6D639B00D8DADD /* View */,
-				33C72BFE2B6D639B00D8DADD /* Interactor */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -487,16 +487,6 @@
 				33C72D202B75FEA700D8DADD /* SubViews */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		33C72BFE2B6D639B00D8DADD /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				33C72BFF2B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift */,
-				33C72C002B6D639B00D8DADD /* FlowTabbarInteractorInput.swift */,
-				33C72C012B6D639B00D8DADD /* FlowTabbarInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		33C72C022B6D639B00D8DADD /* GaleryFlow */ = {
@@ -697,6 +687,7 @@
 				33C72CDC2B724A1000D8DADD /* FullScreenImageViewController.swift */,
 				33C72CDD2B724A1000D8DADD /* FullScreenImageViewOutput.swift */,
 				33C72CDE2B724A1000D8DADD /* FullScreenImageViewInput.swift */,
+				334636DE2B7B1FB4004CE595 /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,6 +705,7 @@
 		33C72CEF2B725D1B00D8DADD /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */,
 				33C72D0F2B75269F00D8DADD /* LocalDB */,
 				33C72D002B72F79000D8DADD /* Model */,
 			);
@@ -757,7 +749,6 @@
 			isa = PBXGroup;
 			children = (
 				33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */,
-				33C72CF02B725D3200D8DADD /* TempImageStorage.swift */,
 			);
 			path = ImageLoader;
 			sourceTree = "<group>";
@@ -765,7 +756,7 @@
 		33C72D0F2B75269F00D8DADD /* LocalDB */ = {
 			isa = PBXGroup;
 			children = (
-				33C72D022B73F5D400D8DADD /* DBManager.swift */,
+				33C72D022B73F5D400D8DADD /* DatabaseManagerImp.swift */,
 				33C72D082B73F68D00D8DADD /* DBPhotoCollection.swift */,
 				33C72D102B7526BC00D8DADD /* DBCollecionNames.swift */,
 				33C72D0A2B74E08A00D8DADD /* DBPhoto.swift */,
@@ -948,7 +939,6 @@
 				33C72C4B2B6D639B00D8DADD /* CoordinatorFactoryImpl.swift in Sources */,
 				33C72C312B6D639B00D8DADD /* FlowTabbarAssembly.swift in Sources */,
 				33C72CEB2B724A1000D8DADD /* FullScreenImageInteractor.swift in Sources */,
-				33C72C3B2B6D639B00D8DADD /* FlowTabbarInteractor.swift in Sources */,
 				33C72C242B6D639B00D8DADD /* FavoritesCoordinator.swift in Sources */,
 				33C72CE52B724A1000D8DADD /* FullScreenImagePresenter.swift in Sources */,
 				33C72B732B6D546800D8DADD /* AppDelegate.swift in Sources */,
@@ -961,7 +951,6 @@
 				33C72C4E2B6D639B00D8DADD /* Router.swift in Sources */,
 				33C72C4D2B6D639B00D8DADD /* RouterImp.swift in Sources */,
 				33C72C8A2B6E81FA00D8DADD /* APIRouter.swift in Sources */,
-				33C72C3A2B6D639B00D8DADD /* FlowTabbarInteractorInput.swift in Sources */,
 				33C72CFD2B7287F300D8DADD /* FavoritesView.swift in Sources */,
 				33C72D1F2B75839A00D8DADD /* GradientTabbarButton.swift in Sources */,
 				33C72C2F2B6D639B00D8DADD /* TabbarCoordinator.swift in Sources */,
@@ -994,6 +983,7 @@
 				33C72CE32B724A1000D8DADD /* FullScreenImageAssemblyProtocol.swift in Sources */,
 				33C72C462B6D639B00D8DADD /* GaleryInteractorInput.swift in Sources */,
 				33C72C362B6D639B00D8DADD /* FlowTabbarController.swift in Sources */,
+				334636DD2B7B1FB2004CE595 /* FullScreenImageView.swift in Sources */,
 				33C72BD42B6D633800D8DADD /* DeepLinkOption.swift in Sources */,
 				33C72C442B6D639B00D8DADD /* GaleryViewInput.swift in Sources */,
 				33C72CE72B724A1000D8DADD /* FullScreenImageViewController.swift in Sources */,
@@ -1010,7 +1000,7 @@
 				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
 				33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */,
 				33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */,
-				33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */,
+				33C72CF12B725D3200D8DADD /* RuntimeStorage.swift in Sources */,
 				33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */,
 				33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */,
 				33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */,
@@ -1021,13 +1011,11 @@
 				33C72C432B6D639B00D8DADD /* GaleryViewController.swift in Sources */,
 				33C72C422B6D639B00D8DADD /* GaleryViewOutput.swift in Sources */,
 				33C72C492B6D639B00D8DADD /* FavoritesFlowFactory.swift in Sources */,
-				33C72BC82B6D621B00D8DADD /* Presentable.swift in Sources */,
 				33C72BCC2B6D622700D8DADD /* ApplicationCoordinator.swift in Sources */,
 				33C72C452B6D639B00D8DADD /* GaleryInteractorOutput.swift in Sources */,
 				33C72D222B75FF0600D8DADD /* BottomTabbarView.swift in Sources */,
-				33C72C392B6D639B00D8DADD /* FlowTabbarInteractorOutput.swift in Sources */,
 				33C72C4C2B6D639B00D8DADD /* CoordinatorFactory.swift in Sources */,
-				33C72D032B73F5D400D8DADD /* DBManager.swift in Sources */,
+				33C72D032B73F5D400D8DADD /* DatabaseManagerImp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,7 +1199,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.roma.pickapp.PickApp;
 				PRODUCT_NAME = "Pic App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1240,7 +1228,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.roma.pickapp.PickApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

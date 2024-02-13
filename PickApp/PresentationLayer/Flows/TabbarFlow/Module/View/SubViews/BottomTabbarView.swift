@@ -35,21 +35,21 @@ class BottomTabbarView: UIView, UITabBarDelegate {
         let frame = CGRect(origin: .zero, size: CGSize(width: width, height: height))
         
         let button0 = GradientTabbarButton(frame: frame)
-        button0.setupColors([UIColor(hex: "#56A9C0")!, UIColor(hex: "#3FE3E2")!])
+        button0.setupColors([UIColor(hex: 0x56A9C0)!, UIColor(hex: 0x3FE3E2)!])
         button0.setupCornerMask([.layerMaxXMinYCorner])
         button0.setupImage(UIImage(named: "galery"))
         button0.setupTitle("Galery")
         button0.tag = 0
         
         let button1 = GradientTabbarButton(frame: frame)
-        button1.setupColors([UIColor(hex: "#3FE3E2")!, UIColor(hex: "#3BF0F7")!])
+        button1.setupColors([UIColor(hex: 0x3FE3E2)!, UIColor(hex: 0x3BF0F7)!])
         button1.setupCornerMask([.layerMaxXMinYCorner, .layerMinXMinYCorner])
         button1.setupImage(UIImage(named: "new_post"))
         button1.setupTitle("New Post")
         button1.tag = 1
         
         let button2 = GradientTabbarButton(frame: frame)
-        button2.setupColors([UIColor(hex: "#3BF0F7")!, UIColor(hex: "#15A6F8")!])
+        button2.setupColors([UIColor(hex: 0x3BF0F7)!, UIColor(hex: 0x15A6F8)!])
         button2.setupCornerMask([.layerMinXMinYCorner])
         button2.setupImage(UIImage(named: "favorites"))
         button2.setupTitle("Favorites")

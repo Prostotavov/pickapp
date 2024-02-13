@@ -8,8 +8,9 @@
 import UIKit
 
 protocol GaleryViewDelegate: AnyObject {
-    func onImageCellTap(with id: String)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
+    func loadImage(at indexPath: IndexPath, from url: URL)
 }
 
 class GaleryView: UIView {
@@ -34,7 +35,7 @@ class GaleryView: UIView {
         self.addSubview(photoCollectionView)
         photoCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            photoCollectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            photoCollectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: side_offset),
             photoCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             photoCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -side_offset),
             photoCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: side_offset),
@@ -44,11 +45,20 @@ class GaleryView: UIView {
     func reloadData(with photos: [Photo]) {
         photoCollectionView.reloadData(with: photos)
     }
+    
+    func updateImage(at indexPath: IndexPath, with image: UIImage?) {
+        photoCollectionView.updateImage(at: indexPath, with: image)
+    }
 }
 
 extension GaleryView: PhotoCollectionViewDelegate {
-    func onImageCellTap(with id: String) {
-        delegate.onImageCellTap(with: id)
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+        delegate.loadImage(at: indexPath, from: url)
+    }
+    
+    func onImageCellTap(with content: Photo) {
+        delegate.onImageCellTap(with: content)
     }
     
     func userDidScrollToEnd() {

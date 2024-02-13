@@ -10,7 +10,8 @@ import UIKit
 
 protocol GaleryViewOutput: AnyObject {
     
-    func onImageCellTap(with id: String)
+    func loadImage(at indexPath: IndexPath, from url: URL)
+    func onImageCellTap(with content: Photo)
     func userDidScrollToEnd()
     func loadView()
 }

@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         applicationCoordinator.start()
         
         setupReamlCollections()
+        setupImageLoader()
         
         window?.makeKeyAndVisible()
     }
@@ -42,7 +43,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupReamlCollections() {
-        DBManager.shared.createPhotoCollection(name: .favorites)
+        DatabaseManagerImp().createPhotoCollection(name: .favorites)
+    }
+    
+    private func setupImageLoader() {
+        ImageLoaderImp.shared.runtimeStorage = RuntimeStorageImp.shared
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

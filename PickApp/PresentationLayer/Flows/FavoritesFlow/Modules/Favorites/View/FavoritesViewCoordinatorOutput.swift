@@ -5,8 +5,8 @@
 //  Created by Roma on 2.02.24.
 //
 
-import Foundation
+import UIKit
 
-protocol FavoritesViewCoordinatorOutput: Presentable {
-    var onImageCell: ((_ id: String) -> Void)? { get set }
+protocol FavoritesViewCoordinatorOutput: UIViewController {
+    var onImageCell: ((_ content: Photo) -> Void)? { get set }
 }

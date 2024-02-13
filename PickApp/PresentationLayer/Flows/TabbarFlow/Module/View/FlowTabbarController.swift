@@ -16,7 +16,6 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
     var onFavoritesFlow: ((UINavigationController) -> Void)?
     
     let topPanelOffset: CGFloat = 40
-    let side_offset: CGFloat = 5
     
     private var bottomTB: BottomTabbarView!
     
@@ -47,7 +46,7 @@ class FlowTabbarController: UITabBarController, UITabBarControllerDelegate, Flow
             self.viewControllers![i].view.translatesAutoresizingMaskIntoConstraints = false
             if i != index { continue }
             NSLayoutConstraint.activate([
-                self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset + side_offset),
+                self.viewControllers![i].view!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPanelOffset),
                 self.viewControllers![i].view!.bottomAnchor.constraint(equalTo: bottomTB.topAnchor),
                 self.viewControllers![i].view!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
                 self.viewControllers![i].view!.leadingAnchor.constraint(equalTo: view.leadingAnchor),

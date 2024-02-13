@@ -7,28 +7,31 @@
 
 import Foundation
 
-class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, DBManagerOutput {
+class FavoritesPresenter: FavoritesViewOutput, FavoritesInteractorOutput, DatabaseManagerOutput {
 
     weak var view: FavoritesViewInput!
     weak var coordinator: FavoritesViewCoordinatorOutput!
     var interactor: FavoritesInteractorInput!
+    var databaseManager: DatabaseManager!
     
     func newPhotosLiked() {
-        DispatchQueue.main.async {
-            let favPhotos = DBManager.shared.getPhotos(fromCollectionWithName: .favorites)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let favPhotos = self.databaseManager.getPhotos(fromCollectionWithName: .favorites)
             self.view.reloadCollectionView(with: favPhotos)
         }
     }
     
     func loadView() {
-        DispatchQueue.main.async {
-            let favPhotos = DBManager.shared.getPhotos(fromCollectionWithName: .favorites)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let favPhotos = self.databaseManager.getPhotos(fromCollectionWithName: .favorites)
             self.view.reloadCollectionView(with: favPhotos)
         }
     }
     
-    func onImageCellTap(with id: String) {
-        coordinator.onImageCell?(id)
+    func onImageCellTap(with content: Photo) {
+        coordinator.onImageCell?(content)
     }
     
     func userDidScrollToEnd() {

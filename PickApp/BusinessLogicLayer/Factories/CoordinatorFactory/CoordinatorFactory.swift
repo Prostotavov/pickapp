@@ -9,7 +9,7 @@ import  UIKit.UINavigationController
 
 protocol CoordinatorFactory {
 
-    func produceTabbarCoordinator(coordinatorFactory: CoordinatorFactory) -> (configurator: Coordinator & TabbarCoordinatorOutput, toPresent: Presentable?)
+    func produceTabbarCoordinator(coordinatorFactory: CoordinatorFactory) -> (configurator: Coordinator & TabbarCoordinatorOutput, toPresent: UIViewController?)
     
     // MARK: - Galery
     func produceGaleryCoordinator(flowFactory: GaleryFlowFactory) -> Coordinator & GaleryCoordinatorOutput

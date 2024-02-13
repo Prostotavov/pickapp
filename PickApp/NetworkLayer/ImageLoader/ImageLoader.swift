@@ -9,11 +9,12 @@ import UIKit
 import PromiseKit
 import Alamofire
 
-class ImageLoader {
-    
-    let appID = "562730"
-    let accessKey = "TrARTBODRW3UIkwQt8OuyeujG21qDrH3IUbUfAYWt2k"
-    let secretKey = "DwXJppWhVtElskHv4NzHUGr5rtBEcW6nNrKbKfV-VvA"
+protocol ImageLoader {
+    func loadImages(page: Int, per_page: Int)
+    func loadMorePhotos()
+}
+
+class ImageLoaderImp: ImageLoader {
     
     var apiKeys: APIKeys!
     
@@ -24,9 +25,15 @@ class ImageLoader {
         return ConnectionSettings.sessionManager()
     }()
     
-    static let shared = ImageLoader()
+    static let shared = ImageLoaderImp()
+    var runtimeStorage: RuntimeStorage!
     
     init() {
+        guard let appID = ProcessInfo.processInfo.environment["APP_ID"],
+              let accessKey = ProcessInfo.processInfo.environment["ACCESS_KEY"],
+              let secretKey = ProcessInfo.processInfo.environment["SECRET_KEY"] else {
+            fatalError("Couldn't get keys from environment variables")
+        }
         self.apiKeys = APIKeys(appID: appID, accessKey: accessKey, secretKey: secretKey)
     }
     
@@ -38,9 +45,8 @@ class ImageLoader {
             photosPromise
         }
         .done { photos in
-            TempImageStorage.shared.addPhotos(photosResponse: photos, images: [])
+            self.runtimeStorage.addPhotos(photosResponse: photos, images: [])
             self.photosResponse = photos
-            self.getAndStoreImages()
         }
         .catch { error in
             print("error in getPhotos: \(error)")
@@ -50,20 +56,6 @@ class ImageLoader {
     func loadMorePhotos() {
         currentPage += 1
         loadImages(page: currentPage)
-    }
-    
-    private func getAndStoreImages() {
-        for photo in photosResponse {
-            guard let imageURL = URL(string: photo.urls!.small) else {
-                return
-            }
-            DispatchQueue.global().async {
-                guard let imageData = try? Data(contentsOf: imageURL) else {
-                    return
-                }
-                TempImageStorage.shared.addPhoto(photoResponse: photo, image: UIImage(data: imageData))
-            }
-        }
     }
     
 }

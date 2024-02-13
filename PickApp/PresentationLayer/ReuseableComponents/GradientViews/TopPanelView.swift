@@ -12,9 +12,9 @@ class TopPanelView: UIView {
     private let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
-            UIColor(hex: "#58A7BF")!.cgColor,
-            UIColor(hex: "#34FFF3")!.cgColor,
-            UIColor(hex: "#48D3FF")!.cgColor
+            UIColor(hex: 0x58A7BF)!.cgColor,
+            UIColor(hex: 0x34FFF3)!.cgColor,
+            UIColor(hex: 0x48D3FF)!.cgColor
         ]
         gradientLayer.locations = [0.0, 0.5, 1.0]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)

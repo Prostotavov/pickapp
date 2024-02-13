@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FullScreenImageInteractorInput: AnyObject {
-    func likePhoto(with id: String)
+    func likePhoto(photo: Photo)
 }
