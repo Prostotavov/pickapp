@@ -30,6 +30,8 @@ class DatabaseManagerImp: DatabaseManager {
     
     weak var output: DatabaseManagerOutput!
     
+    static let shared = DatabaseManagerImp()
+    
     private var realm: Realm {
         do {
             return try Realm()

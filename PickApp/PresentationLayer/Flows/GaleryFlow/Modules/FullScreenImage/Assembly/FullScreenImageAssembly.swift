@@ -19,7 +19,7 @@ class FullScreenImageAssembly: FullScreenImageAssemblyProtocol {
         
         let presenter = FullScreenImagePresenter()
         let interactor = FullScreenImageInteractor()
-        let databaseManager = DatabaseManagerImp()
+        let databaseManager = DatabaseManagerImp.shared
         
         presenter.view = viewController
         presenter.coordinator = viewController
