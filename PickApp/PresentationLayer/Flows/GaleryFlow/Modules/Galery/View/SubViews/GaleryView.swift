@@ -10,6 +10,7 @@ import UIKit
 protocol GaleryViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
     func userDidScrollToEnd()
+    func loadImage(at indexPath: IndexPath, from url: URL)
 }
 
 class GaleryView: UIView {
@@ -44,9 +45,18 @@ class GaleryView: UIView {
     func reloadData(with photos: [Photo]) {
         photoCollectionView.reloadData(with: photos)
     }
+    
+    func updateImage(at indexPath: IndexPath, with image: UIImage?) {
+        photoCollectionView.updateImage(at: indexPath, with: image)
+    }
 }
 
 extension GaleryView: PhotoCollectionViewDelegate {
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+        delegate.loadImage(at: indexPath, from: url)
+    }
+    
     func onImageCellTap(with id: String) {
         delegate.onImageCellTap(with: id)
     }

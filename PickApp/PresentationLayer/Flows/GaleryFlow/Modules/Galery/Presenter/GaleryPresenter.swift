@@ -31,4 +31,14 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     func loadView() {
         ImageLoader.shared.loadImages()
     }
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+        interactor.loadImage(from: url, completionHandler: { [weak self] imageData in
+            DispatchQueue.main.async {
+                let image = UIImage(data: imageData ?? Data())
+                self?.view?.updateImage(at: indexPath, with: image)
+            }
+        })
+    }
+    
 }

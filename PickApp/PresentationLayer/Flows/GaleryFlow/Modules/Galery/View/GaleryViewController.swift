@@ -32,15 +32,24 @@ class GaleryViewController: UIViewController, GaleryViewInput, GaleryViewCoordin
     override var prefersStatusBarHidden: Bool {
         return true
     }
-}
-
-extension GaleryViewController: GaleryViewDelegate {
-    func onImageCellTap(with id: String) {
-        output.onImageCellTap(with: id)
+    
+    func updateImage(at indexPath: IndexPath, with image: UIImage?) {
+        galeryView.updateImage(at: indexPath, with: image)
     }
     
     func reloadCollectionView(with photos: [Photo]) {
         galeryView.reloadData(with: photos)
+    }
+}
+
+extension GaleryViewController: GaleryViewDelegate {
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+        output.loadImage(at: indexPath, from: url)
+    }
+    
+    func onImageCellTap(with id: String) {
+        output.onImageCellTap(with: id)
     }
     
     func userDidScrollToEnd() {

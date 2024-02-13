@@ -9,4 +9,5 @@ import Foundation
 
 protocol GaleryInteractorInput: AnyObject {
 
+    func loadImage(from url: URL?, completionHandler: @escaping (Data?) -> Void)
 }

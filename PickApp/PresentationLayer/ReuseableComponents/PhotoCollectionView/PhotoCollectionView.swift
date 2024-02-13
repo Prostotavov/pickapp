@@ -10,6 +10,7 @@ import UIKit
 protocol PhotoCollectionViewDelegate: AnyObject {
     func onImageCellTap(with id: String)
     func userDidScrollToEnd()
+    func loadImage(at indexPath: IndexPath, from url: URL)
 }
 
 class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -61,15 +62,7 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
         guard let imageURL = URL(string: photos[indexPath.row].url) else {
             return cell
         }
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else {
-                return
-            }
-            let cellImage = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                cell.imageView.image = cellImage
-            }
-        }
+        delegate?.loadImage(at: indexPath, from: imageURL)
         cell.imageView.image = photos[indexPath.item].image
         return cell
     }
@@ -98,6 +91,13 @@ class PhotoCollectionView: UIView, UICollectionViewDataSource, UICollectionViewD
     func reloadData(with photos: [Photo]) {
         self.photos = photos
         collectionView?.reloadData()
+    }
+    
+    func updateImage(at indexPath: IndexPath, with image: UIImage?) {
+        guard let cell = collectionView?.cellForItem(at: indexPath) as? PhotoCollectionViewCell else {
+            return
+        }
+        cell.imageView.image = image
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

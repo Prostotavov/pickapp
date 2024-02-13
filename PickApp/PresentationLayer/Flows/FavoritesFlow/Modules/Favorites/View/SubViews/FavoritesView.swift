@@ -47,6 +47,10 @@ class FavoritesView: UIView {
 }
 
 extension FavoritesView: PhotoCollectionViewDelegate {
+    
+    func loadImage(at indexPath: IndexPath, from url: URL) {
+    }
+    
     func onImageCellTap(with id: String) {
         delegate.onImageCellTap(with: id)
     }
