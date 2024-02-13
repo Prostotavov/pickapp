@@ -9,7 +9,12 @@ import UIKit
 import PromiseKit
 import Alamofire
 
-class ImageLoader {
+protocol ImageLoader {
+    func loadImages(page: Int, per_page: Int)
+    func loadMorePhotos()
+}
+
+class ImageLoaderImp: ImageLoader {
     
     var apiKeys: APIKeys!
     
@@ -20,7 +25,7 @@ class ImageLoader {
         return ConnectionSettings.sessionManager()
     }()
     
-    static let shared = ImageLoader()
+    static let shared = ImageLoaderImp()
     
     init() {
         guard let appID = ProcessInfo.processInfo.environment["APP_ID"],

@@ -19,10 +19,12 @@ class GaleryAssembly: NSObject, GaleryAssemblyProtocol {
         
         let presenter = GaleryPresenter()
         let interactor = GaleryInteractor()
+        let imageLoader = ImageLoaderImp()
             
         presenter.view = viewController
         presenter.coordinator = viewController
         presenter.interactor = interactor
+        presenter.ImageLoader = imageLoader
         
         interactor.output = presenter
         viewController.output = presenter

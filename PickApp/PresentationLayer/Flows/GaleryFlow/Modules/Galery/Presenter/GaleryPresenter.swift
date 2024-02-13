@@ -13,6 +13,7 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     weak var view: GaleryViewInput!
     weak var coordinator: GaleryViewCoordinatorOutput!
     var interactor: GaleryInteractorInput!
+    var ImageLoader: ImageLoader!
     
     func onImageCellTap(with content: Photo) {
         coordinator.onImageCell?(content)
@@ -25,11 +26,11 @@ class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
     }
     
     func userDidScrollToEnd() {
-        ImageLoader.shared.loadMorePhotos()
+        ImageLoader.loadMorePhotos()
     }
     
     func loadView() {
-        ImageLoader.shared.loadImages()
+        ImageLoader.loadImages(page: 1, per_page: 28)
     }
     
     func loadImage(at indexPath: IndexPath, from url: URL) {
