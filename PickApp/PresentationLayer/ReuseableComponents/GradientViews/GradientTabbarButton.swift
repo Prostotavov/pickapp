@@ -10,8 +10,8 @@ import UIKit
 class GradientTabbarButton: UIButton {
     
     var colors: [UIColor] = [
-        UIColor(hex: "#58A7BF")!,
-        UIColor(hex: "#48D3FF")!
+        UIColor(hex: 0x58A7BF)!,
+        UIColor(hex: 0x48D3FF)!
     ]
     
     var locations: [NSNumber] = [0.0, 1.0]
