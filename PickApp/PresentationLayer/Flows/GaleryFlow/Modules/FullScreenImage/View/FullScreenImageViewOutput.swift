@@ -9,6 +9,6 @@ import Foundation
 
 protocol FullScreenImageViewOutput: AnyObject {
     
-    func onLikePressed(with id: String)
+    func onLikePressed(for photo: Photo)
     func onBackPressed()
 }

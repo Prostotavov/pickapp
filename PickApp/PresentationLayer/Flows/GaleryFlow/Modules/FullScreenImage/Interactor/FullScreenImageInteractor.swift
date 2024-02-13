@@ -12,13 +12,10 @@ class FullScreenImageInteractor: FullScreenImageInteractorInput {
     weak var output: FullScreenImageInteractorOutput!
     var databaseManager: DatabaseManager!
     
-    func likePhoto(with id: String) {
-        if databaseManager.isExistPhoto(withId: id, inCollectionWithName: .favorites) {
-            databaseManager.deletePhoto(withId: id, fromCollectionWithName: .favorites)
+    func likePhoto(photo: Photo) {
+        if databaseManager.isExistPhoto(withId: photo.id, inCollectionWithName: .favorites) {
+            databaseManager.deletePhoto(withId: photo.id, fromCollectionWithName: .favorites)
         } else {
-            guard let photo = TempImageStorage.shared.getPhoto(with: id) else {
-                return
-            }
             let dbPhoto = DBPhoto()
             dbPhoto.id = photo.id
             dbPhoto.url = photo.url
