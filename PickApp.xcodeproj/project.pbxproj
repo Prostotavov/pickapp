@@ -77,7 +77,7 @@
 		33C72CEA2B724A1000D8DADD /* FullScreenImageInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */; };
 		33C72CEB2B724A1000D8DADD /* FullScreenImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */; };
 		33C72CEC2B724A1000D8DADD /* FullScreenImageInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */; };
-		33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* TempImageStorage.swift */; };
+		33C72CF12B725D3200D8DADD /* RuntimeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */; };
 		33C72CF32B725F0300D8DADD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF22B725F0300D8DADD /* Photo.swift */; };
 		33C72CF52B726F0400D8DADD /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */; };
 		33C72CFA2B72745800D8DADD /* GaleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C72CF92B72745800D8DADD /* GaleryView.swift */; };
@@ -188,7 +188,7 @@
 		33C72CE02B724A1000D8DADD /* FullScreenImageInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorInput.swift; sourceTree = "<group>"; };
 		33C72CE12B724A1000D8DADD /* FullScreenImageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractor.swift; sourceTree = "<group>"; };
 		33C72CE22B724A1000D8DADD /* FullScreenImageInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageInteractorOutput.swift; sourceTree = "<group>"; };
-		33C72CF02B725D3200D8DADD /* TempImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempImageStorage.swift; sourceTree = "<group>"; };
+		33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeStorage.swift; sourceTree = "<group>"; };
 		33C72CF22B725F0300D8DADD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		33C72CF42B726F0400D8DADD /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		33C72CF92B72745800D8DADD /* GaleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryView.swift; sourceTree = "<group>"; };
@@ -694,6 +694,7 @@
 		33C72CEF2B725D1B00D8DADD /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				33C72CF02B725D3200D8DADD /* RuntimeStorage.swift */,
 				33C72D0F2B75269F00D8DADD /* LocalDB */,
 				33C72D002B72F79000D8DADD /* Model */,
 			);
@@ -737,7 +738,6 @@
 			isa = PBXGroup;
 			children = (
 				33C72CFE2B72D6A100D8DADD /* ImageLoader.swift */,
-				33C72CF02B725D3200D8DADD /* TempImageStorage.swift */,
 			);
 			path = ImageLoader;
 			sourceTree = "<group>";
@@ -988,7 +988,7 @@
 				33C72C2A2B6D639B00D8DADD /* FavoritesViewCoordinatorOutput.swift in Sources */,
 				33C72C912B6E878600D8DADD /* SessionHelpers.swift in Sources */,
 				33C72C472B6D639B00D8DADD /* GaleryInteractor.swift in Sources */,
-				33C72CF12B725D3200D8DADD /* TempImageStorage.swift in Sources */,
+				33C72CF12B725D3200D8DADD /* RuntimeStorage.swift in Sources */,
 				33C72C302B6D639B00D8DADD /* TabbarCoordinatorOutput.swift in Sources */,
 				33C72C342B6D639B00D8DADD /* FlowTabbar.swift in Sources */,
 				33C72C402B6D639B00D8DADD /* GaleryPresenter.swift in Sources */,

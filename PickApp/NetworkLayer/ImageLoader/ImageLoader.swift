@@ -26,6 +26,7 @@ class ImageLoaderImp: ImageLoader {
     }()
     
     static let shared = ImageLoaderImp()
+    var runtimeStorage: RuntimeStorage!
     
     init() {
         guard let appID = ProcessInfo.processInfo.environment["APP_ID"],
@@ -44,7 +45,7 @@ class ImageLoaderImp: ImageLoader {
             photosPromise
         }
         .done { photos in
-            TempImageStorage.shared.addPhotos(photosResponse: photos, images: [])
+            self.runtimeStorage.addPhotos(photosResponse: photos, images: [])
             self.photosResponse = photos
         }
         .catch { error in

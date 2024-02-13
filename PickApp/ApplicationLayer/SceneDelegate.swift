@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private var applicationCoordinator: Coordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        print("[scene]")
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
@@ -27,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         applicationCoordinator.start()
         
         setupReamlCollections()
+        setupImageLoader()
         
         window?.makeKeyAndVisible()
     }
@@ -43,6 +45,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupReamlCollections() {
         DatabaseManagerImp().createPhotoCollection(name: .favorites)
+    }
+    
+    private func setupImageLoader() {
+        ImageLoaderImp.shared.runtimeStorage = RuntimeStorageImp.shared
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

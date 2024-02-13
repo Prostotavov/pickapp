@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, StorageOutput {
+class GaleryPresenter: GaleryViewOutput, GaleryInteractorOutput, RuntimeStorageOutput {
     
     weak var view: GaleryViewInput!
     weak var coordinator: GaleryViewCoordinatorOutput!

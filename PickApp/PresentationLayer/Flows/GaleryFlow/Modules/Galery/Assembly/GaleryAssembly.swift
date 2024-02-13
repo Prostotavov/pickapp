@@ -19,7 +19,8 @@ class GaleryAssembly: NSObject, GaleryAssemblyProtocol {
         
         let presenter = GaleryPresenter()
         let interactor = GaleryInteractor()
-        let imageLoader = ImageLoaderImp()
+        let imageLoader = ImageLoaderImp.shared
+        let runtimeImageStorage = RuntimeStorageImp.shared
             
         presenter.view = viewController
         presenter.coordinator = viewController
@@ -28,7 +29,7 @@ class GaleryAssembly: NSObject, GaleryAssemblyProtocol {
         
         interactor.output = presenter
         viewController.output = presenter
-        TempImageStorage.shared.output = presenter
+        runtimeImageStorage.output = presenter
     }
     
 }
